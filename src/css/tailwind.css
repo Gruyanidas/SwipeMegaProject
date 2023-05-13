@@ -8,17 +8,6 @@
   box-sizing: border-box;
 }
 
-.font-roboto {
-  font-family: "Roboto", "san-serif";
-}
-
-.font-anek {
-  font-family: "Anek Telugu", "sans-serif";
-}
-
-.par {
-  @apply text-lg font-roboto leading-7 my-4;
-}
 
 .h1 {
   @apply font-anek font-semibold text-8xl m-0 w-full;
@@ -26,10 +15,6 @@
   line-height: 108px;
 }
 
-.h2 {
-  @apply font-anek font-medium text-5xl m-0 w-full;
-  letter-spacing: -0.25px;
-}
 
 .h3 {
   @apply font-anek font-medium text-4xl m-0 w-full;
@@ -54,6 +39,7 @@
 .anchor {
   @apply no-underline text-base font-medium duration-300 ease-linear hover:text-slate-800;
   color: #7000ff;
+
 }
 
 .subtitle {
@@ -68,14 +54,9 @@
   @apply text-sm text-slate-300;
 }
 
-.pbutton {
+/* ubaceno u layer components.pbutton {
   @apply hover:bg-slate-500 font-roboto text-base tracking-wider font-semibold rounded-3xl bg-slate-800 border-none text-slate-300 py-2 px-5 duration-200;
-}
-
-.tbutton {
-  @apply hover:opacity-75 font-roboto text-base tracking-wider font-semibold bg-transparent border-none text-slate-800 p-3
-  duration-200;
-}
+} */
 
 .with-icon {
   @apply flex justify-center items-center pr-3;
@@ -84,7 +65,27 @@
   @apply translate-x-1 duration-200 ease-out;
 }
 
-/* modified .pbutton */
+/* layer components introduced */
+@layer components {
+  .pbutton { @apply hover:bg-purplish-400 font-roboto text-base tracking-wider font-semibold rounded-3xl bg-slate-800 border-none text-slate-300 py-2 px-5 duration-200;
+  };
+  .tbutton {
+    @apply hover:opacity-75 font-roboto text-base tracking-wider font-semibold bg-transparent border-none text-slate-800 p-3
+    duration-200;
+  };
+  
+}
+
+@layer base {
+  .h2 {
+    @apply font-anek font-medium text-5xl m-0 w-full;
+    letter-spacing: -0.25px;
+  };
+  .par {
+    @apply text-lg font-roboto leading-7 my-4;
+  };
+}
+
 .pbuttonmod {
   background-color: rgba(30, 41, 59, 0.25);
 }

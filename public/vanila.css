@@ -376,6 +376,22 @@ video {
 [hidden] {
   display: none;
 }
+  .h2 {
+  margin: 0px;
+  width: 100%;
+  font-family: Anek Telugu, sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 500;
+    letter-spacing: -0.25px;
+}
+  .par {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: Roboto, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
 
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
@@ -476,6 +492,44 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.pbutton {
+  border-radius: 1.5rem;
+  border-style: none;
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity));
+  transition-duration: 200ms;
+}
+.pbutton:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(141 51 255 / var(--tw-bg-opacity));
+}
+.tbutton {
+  border-style: none;
+  background-color: transparent;
+  padding: 0.75rem;
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity));
+  transition-duration: 200ms;
+}
+.tbutton:hover {
+  opacity: 0.75;
+}
 .m-2 {
   margin: 0.5rem;
 }
@@ -483,15 +537,31 @@ video {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
 .mb-5 {
   margin-bottom: 1.25rem;
 }
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
 .ml-10 {
   margin-left: 2.5rem;
+}
+.mt-10 {
+  margin-top: 2.5rem;
+}
+.mt-3 {
+  margin-top: 0.75rem;
 }
 .flex {
   display: flex;
@@ -502,8 +572,14 @@ video {
 .max-h-\[600px\] {
   max-height: 600px;
 }
+.max-h-screen {
+  max-height: 100vh;
+}
 .min-h-screen {
   min-height: 100vh;
+}
+.w-1\/2 {
+  width: 50%;
 }
 .w-full {
   width: 100%;
@@ -571,8 +647,22 @@ video {
 .place-self-center {
   place-self: center;
 }
+.bg-purplish-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(67 0 153 / var(--tw-bg-opacity));
+}
+.bg-slate-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
 .p-4 {
   padding: 1rem;
+}
+.opacity-50 {
+  opacity: 0.5;
+}
+.opacity-25 {
+  opacity: 0.25;
 }
 
 * {
@@ -581,22 +671,6 @@ video {
   box-sizing: border-box;
 }
 
-.font-roboto {
-  font-family: "Roboto", "san-serif";
-}
-
-.font-anek {
-  font-family: "Anek Telugu", "sans-serif";
-}
-
-.par {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-family: Roboto, sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-family: "Roboto", "san-serif";
-}
 
 .h1 {
   margin: 0px;
@@ -605,21 +679,10 @@ video {
   font-size: 6rem;
   line-height: 1;
   font-weight: 600;
-  font-family: "Anek Telugu", "sans-serif";
   letter-spacing: -1px;
   line-height: 108px;
 }
 
-.h2 {
-  margin: 0px;
-  width: 100%;
-  font-family: Anek Telugu, sans-serif;
-  font-size: 3rem;
-  line-height: 1;
-  font-weight: 500;
-  font-family: "Anek Telugu", "sans-serif";
-  letter-spacing: -0.25px;
-}
 
 .h3 {
   margin: 0px;
@@ -628,7 +691,6 @@ video {
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: 500;
-  font-family: "Anek Telugu", "sans-serif";
   line-height: 75px;
 }
 
@@ -639,7 +701,6 @@ video {
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 500;
-  font-family: "Anek Telugu", "sans-serif";
   letter-spacing: 0.25px;
 }
 
@@ -650,7 +711,6 @@ video {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 500;
-  font-family: "Anek Telugu", "sans-serif";
   letter-spacing: 0.25px;
 }
 
@@ -661,7 +721,6 @@ video {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 500;
-  font-family: "Anek Telugu", "sans-serif";
   letter-spacing: 0.25px;
 }
 
@@ -681,6 +740,7 @@ video {
 
 .anchor {
   color: #7000ff;
+
 }
 
 .subtitle {
@@ -690,7 +750,6 @@ video {
   line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(107 33 168 / var(--tw-text-opacity));
-  font-family: "Anek Telugu", "sans-serif";
 }
 
 .subtitle2 {
@@ -700,7 +759,6 @@ video {
   line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
-  font-family: "Anek Telugu", "sans-serif";
 }
 
 .parsmall {
@@ -710,49 +768,9 @@ video {
   color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
-.pbutton {
-  border-radius: 1.5rem;
-  border-style: none;
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  font-family: Roboto, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  --tw-text-opacity: 1;
-  color: rgb(203 213 225 / var(--tw-text-opacity));
-  transition-duration: 200ms;
-  font-family: "Roboto", "san-serif";
-}
-
-.pbutton:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-}
-
-.tbutton {
-  border-style: none;
-  background-color: transparent;
-  padding: 0.75rem;
-  font-family: Roboto, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  --tw-text-opacity: 1;
-  color: rgb(30 41 59 / var(--tw-text-opacity));
-  transition-duration: 200ms;
-  font-family: "Roboto", "san-serif";
-}
-
-.tbutton:hover {
-  opacity: 0.75;
-}
+/* ubaceno u layer components.pbutton {
+  @apply hover:bg-slate-500 font-roboto text-base tracking-wider font-semibold rounded-3xl bg-slate-800 border-none text-slate-300 py-2 px-5 duration-200;
+} */
 
 .with-icon {
   display: flex;
@@ -767,7 +785,8 @@ video {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-/* modified .pbutton */
+/* layer components introduced */
+
 .pbuttonmod {
   background-color: rgba(30, 41, 59, 0.25);
 }
@@ -808,4 +827,22 @@ ul > a:hover {
 /* main sec styling start */
 .button-cont > button:nth-of-type(2) {
   color: #7000ff;
+}
+.hover\:bg-slate-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
+.hover\:bg-slate-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+.hover\:bg-slate-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+.hover\:opacity-70:hover {
+  opacity: 0.7;
+}
+.hover\:opacity-50:hover {
+  opacity: 0.5;
 }
