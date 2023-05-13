@@ -18,11 +18,13 @@
     <title>Swipe</title>
   </head>
   <body
-    class="flex flex-col items-center justify-center min-h-screen"
-    style="background-color: rgb(71, 71, 71)"
+    class="flex flex-col items-center justify-start min-h-screen"
+    style="background-color: rgb(255, 255, 255)"
   >
-    <nav class="navbar flex items-center justify-around w-full max-w-6xl p-4">
-      <img src="assets/logo-white.svg" />
+    <nav
+      class="navbar flex items-center justify-around w-full max-w-6xl p-4 mb-5"
+    >
+      <img class="-translate-x-24" src="assets/logo-dark.svg" />
       <ul class="list-none">
         <a class="anchor m-2" href="#">Products</a>
         <a class="anchor m-2" href="#">Developers</a>
@@ -32,6 +34,51 @@
       </ul>
       <button class="pbutton pbuttonmod">Sign up</button>
     </nav>
-    
+    <main class="my-10">
+      <div class="hero-cont my-10">
+        <div class="two-col max-h-[600px]">
+          <div class="col-left">
+            <h1 class="h1">Payments infrastructure for the world</h1>
+            <p class="max-w-lg">
+              Tons of companies all over the world use Swipe's seamless platform
+              to manage their businesses's entire financial transaction
+              infrastructure online.
+            </p>
+            <div class="button-cont my-4 flex items-center justify-start">
+              <button class="pbutton with-icon">
+                Start now
+                <img src="assets/arrow-right-light.svg" />
+              </button>
+              <button class="tbutton ml-10 with-icon">
+                Contact sales <img src="assets/arrow-right-purple.svg" />
+              </button>
+            </div>
+          </div>
+          <div class="col-right">
+            <img
+              class="scale-75 -translate-y-52 translate-x-5"
+              src="assets/hero-phone.png"
+              alt="phone"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="partners-section">
+        <div class="section-container max-w-6xl">
+          <div
+            class="grid grid-rows-2 grid-cols-4 scale-[80%] gap-y-4 gap-x-3 place-self-center -translate-x-16"
+          >
+            <img src="assets/amazon.png"/>
+            <img src="assets/instacart.png"/>
+            <img src="assets/salesforce.png"/>
+            <img src="assets/slack.png"/>
+            <img src="assets/shopify.png"/>
+            <img src="assets/google.png"/>
+            <img src="assets/lyft.png"/>
+            <img src="assets/zoom.png"/>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
