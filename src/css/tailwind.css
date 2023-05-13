@@ -52,7 +52,7 @@ p {
 }
 
 .anchor {
-  @apply text-purple-700 no-underline font-medium duration-300 ease-linear hover:text-slate-800;
+  @apply text-purple-700 no-underline text-base font-medium duration-300 ease-linear hover:text-slate-800;
 }
 
 .subtitle {
@@ -64,7 +64,7 @@ p {
 }
 
 .parsmall {
-  @apply text-sm text-gray-600;
+  @apply text-sm text-slate-300;
 }
 
 .pbutton {
@@ -83,3 +83,22 @@ p {
 .with-icon:hover > img {
   @apply translate-x-1 duration-200 ease-out;
 }
+
+.pbuttonmod {
+  background-color: rgba(30,41,59, 0.25);
+}
+.pbuttonmod:hover {
+  background-color: rgba(30,41,59, 0.5);
+}
+
+ul > a:hover {
+  text-decoration: underline;
+}
+
+.two-col {
+  @apply flex box-border w-full max-w-6xl items-center justify-center;
+}
+
+.two-col > .col-left {@apply box-border w-1/2 pr-4 flex flex-col}
+.two-col > .col-right {@apply box-border w-1/2 pl-4 flex flex-col}
+

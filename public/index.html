@@ -17,16 +17,21 @@
     />
     <title>Swipe</title>
   </head>
-  <body class="bg-teal-600">
-    <button class="pbutton">Im a freaking button</button>
-    <button class="tbutton">Im a freaking button</button>
-
-    <button class="pbutton with-icon">
-      Im a freaking button
-      <img src="assets/arrow-right-blue.svg"
-      />
-      
-    </button>
-
+  <body
+    class="flex flex-col items-center justify-center min-h-screen"
+    style="background-color: rgb(71, 71, 71)"
+  >
+    <nav class="navbar flex items-center justify-around w-full max-w-6xl p-4">
+      <img src="assets/logo-white.svg" />
+      <ul class="list-none">
+        <a class="anchor m-2" href="#">Products</a>
+        <a class="anchor m-2" href="#">Developers</a>
+        <a class="anchor m-2" href="#">Resources</a>
+        <a class="anchor m-2" href="#">Pricing</a>
+        <a class="anchor m-2" href="#">Solutions</a>
+      </ul>
+      <button class="pbutton pbuttonmod">Sign up</button>
+    </nav>
+    
   </body>
 </html>

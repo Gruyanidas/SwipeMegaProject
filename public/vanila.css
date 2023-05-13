@@ -476,9 +476,38 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.bg-teal-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(13 148 136 / var(--tw-bg-opacity));
+.m-2 {
+  margin: 0.5rem;
+}
+.flex {
+  display: flex;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
+.w-full {
+  width: 100%;
+}
+.max-w-6xl {
+  max-width: 72rem;
+}
+.list-none {
+  list-style-type: none;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.p-4 {
+  padding: 1rem;
 }
 
 * {
@@ -570,6 +599,8 @@ p {
 }
 
 .anchor {
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   --tw-text-opacity: 1;
   color: rgb(126 34 206 / var(--tw-text-opacity));
@@ -607,7 +638,7 @@ p {
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
+  color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
 .pbutton {
@@ -663,3 +694,39 @@ p {
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
+
+.pbuttonmod {
+  background-color: rgba(30,41,59, 0.25);
+}
+.pbuttonmod:hover {
+  background-color: rgba(30,41,59, 0.5);
+}
+
+ul > a:hover {
+  text-decoration: underline;
+}
+
+.two-col {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  max-width: 72rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.two-col > .col-left {
+  box-sizing: border-box;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  padding-right: 1rem;
+}
+.two-col > .col-right {
+  box-sizing: border-box;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  padding-left: 1rem;
+}
+
