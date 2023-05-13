@@ -8,16 +8,16 @@
   box-sizing: border-box;
 }
 
-p {
-  @apply text-lg leading-7 my-4;
-}
-
 .font-roboto {
   font-family: "Roboto", "san-serif";
 }
 
 .font-anek {
   font-family: "Anek Telugu", "sans-serif";
+}
+
+.par {
+  @apply text-lg font-roboto leading-7 my-4;
 }
 
 .h1 {

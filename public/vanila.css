@@ -518,16 +518,16 @@ video {
   --tw-translate-x: -4rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.-translate-x-24 {
+  --tw-translate-x: -6rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .-translate-y-52 {
   --tw-translate-y: -13rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .translate-x-5 {
   --tw-translate-x: 1.25rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.-translate-x-24 {
-  --tw-translate-x: -6rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .scale-75 {
@@ -558,9 +558,6 @@ video {
 .justify-start {
   justify-content: flex-start;
 }
-.justify-between {
-  justify-content: space-between;
-}
 .justify-around {
   justify-content: space-around;
 }
@@ -574,9 +571,6 @@ video {
 .place-self-center {
   place-self: center;
 }
-.self-start {
-  align-self: flex-start;
-}
 .p-4 {
   padding: 1rem;
 }
@@ -587,19 +581,21 @@ video {
   box-sizing: border-box;
 }
 
-p {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .font-roboto {
   font-family: "Roboto", "san-serif";
 }
 
 .font-anek {
   font-family: "Anek Telugu", "sans-serif";
+}
+
+.par {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: Roboto, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "Roboto", "san-serif";
 }
 
 .h1 {
