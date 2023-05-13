@@ -1,3 +1,85 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  @apply text-lg leading-7 my-4;
+}
+
+.font-roboto {
+  font-family: "Roboto", "san-serif";
+}
+
+.font-anek {
+  font-family: "Anek Telugu", "sans-serif";
+}
+
+.h1 {
+  @apply font-anek font-semibold text-8xl m-0 w-full;
+  letter-spacing: -1px;
+  line-height: 108px;
+}
+
+.h2 {
+  @apply font-anek font-medium text-5xl m-0 w-full;
+  letter-spacing: -0.25px;
+}
+
+.h3 {
+  @apply font-anek font-medium text-4xl m-0 w-full;
+  line-height: 75px;
+}
+
+.h4 {
+  @apply font-anek font-medium text-3xl m-0 w-full;
+  letter-spacing: 0.25px;
+}
+
+.h5 {
+  @apply font-anek font-medium text-lg m-0 w-full;
+  letter-spacing: 0.25px;
+}
+
+.h6 {
+  @apply font-anek font-medium text-sm m-0 w-full;
+  letter-spacing: 0.25px;
+}
+
+.anchor {
+  @apply text-purple-700 no-underline font-medium duration-300 ease-linear hover:text-slate-800;
+}
+
+.subtitle {
+  @apply text-purple-800 font-anek font-medium text-base leading-6;
+}
+
+.subtitle2 {
+  @apply text-blue-700 font-anek font-medium text-base leading-6;
+}
+
+.parsmall {
+  @apply text-sm text-gray-600;
+}
+
+.pbutton {
+  @apply hover:bg-slate-500 font-roboto text-base tracking-wider font-semibold rounded-3xl bg-slate-800 border-none text-slate-300 p-3
+  duration-200;
+}
+
+.tbutton {
+  @apply hover:opacity-75 font-roboto text-base tracking-wider font-semibold bg-transparent border-none text-slate-800 p-3
+  duration-200;
+}
+
+.with-icon {
+  @apply flex justify-center items-center pr-3;
+}
+.with-icon:hover > img {
+  @apply translate-x-1 duration-200 ease-out;
+}

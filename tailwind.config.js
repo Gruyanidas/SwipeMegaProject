@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./public/**/*.html"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+        anek: ["Anek Telugu", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
