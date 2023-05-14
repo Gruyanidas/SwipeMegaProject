@@ -66,6 +66,16 @@
     @apply no-underline text-base font-medium duration-300 ease-linear hover:text-slate-800;
     color: #7000ff;
   }
+  .two-col {
+    @apply flex box-border w-full max-w-6xl items-start justify-center;
+  }
+  
+  .two-col > .col-left {
+    @apply box-border w-1/2 pr-4 flex flex-col;
+  }
+  .two-col > .col-right {
+    @apply box-border w-1/2 pl-4 flex flex-col;
+  }
 }
 
 
@@ -87,19 +97,6 @@
 
 ul > a:hover {
   text-decoration: underline;
-}
-
-/* bare bones 2 flex cont in a box */
-
-.two-col {
-  @apply flex box-border w-full max-w-6xl items-start justify-center;
-}
-
-.two-col > .col-left {
-  @apply box-border w-1/2 pr-4 flex flex-col;
-}
-.two-col > .col-right {
-  @apply box-border w-1/2 pl-4 flex flex-col;
 }
 
 .grid-container {
