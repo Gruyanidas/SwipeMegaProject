@@ -8,39 +8,6 @@
   box-sizing: border-box;
 }
 
-.h1 {
-  @apply font-anek font-semibold text-8xl m-0 w-full;
-  letter-spacing: -1px;
-  line-height: 108px;
-}
-
-.h3 {
-  @apply font-anek font-medium text-4xl m-0 w-full;
-  line-height: 75px;
-}
-
-.h5 {
-  @apply font-anek font-medium text-lg m-0 w-full;
-  letter-spacing: 0.25px;
-}
-
-.h6 {
-  @apply font-anek font-medium text-sm m-0 w-full;
-  letter-spacing: 0.25px;
-}
-
-.anchor {
-  @apply no-underline text-base font-medium duration-300 ease-linear hover:text-slate-800;
-  color: #7000ff;
-}
-
-.subtitle {
-  @apply text-purple-800 font-anek font-medium text-base leading-6;
-}
-
-.subtitle2 {
-  @apply text-blue-700 font-anek font-medium text-base leading-6;
-}
 
 /* ubaceno u layer components.pbutton {
   @apply hover:bg-slate-500 font-roboto text-base tracking-wider font-semibold rounded-3xl bg-slate-800 border-none text-slate-300 py-2 px-5 duration-200;
@@ -65,7 +32,42 @@
   .card {
     @apply flex flex-col items-start mr-5;
   }
+  .subtitle {
+    @apply text-purple-800 font-anek font-medium text-base leading-6;
+  }
+  
+  .subtitle2 {
+    @apply text-blue-700 font-anek font-medium text-base leading-6;
+  }
+  .h1 {
+    @apply font-anek font-semibold text-8xl m-0 w-full;
+    letter-spacing: -1px;
+    line-height: 108px;
+  }
+  
+  .h3 {
+    @apply font-anek font-medium text-4xl m-0 w-full;
+    line-height: 75px;
+  }
+  
+  .h5 {
+    @apply font-anek font-medium text-lg m-0 w-full;
+    letter-spacing: 0.25px;
+  }
+  
+  .h6 {
+    @apply font-anek font-medium text-sm m-0 w-full;
+    letter-spacing: 0.25px;
+  }
+  .stat-card {
+    @apply pl-2 border-l-2 h-full border-solid border-bluish-500;
+  }
+  .anchor {
+    @apply no-underline text-base font-medium duration-300 ease-linear hover:text-slate-800;
+    color: #7000ff;
+  }
 }
+
 
 @layer base {
   .h2 {
