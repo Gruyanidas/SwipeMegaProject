@@ -17,14 +17,11 @@
     />
     <title>Swipe</title>
   </head>
-  <body
-    class="flex flex-col items-center justify-start min-h-screen"
-    style="background-color: rgb(255, 255, 255)"
-  >
+  <body class="flex flex-col items-center justify-start min-h-screen">
     <nav
       class="navbar flex items-center justify-around w-full max-w-6xl p-4 mb-5"
     >
-      <img class="-translate-x-24" src="assets/logo-dark.svg" />
+      <img class="-translate-x-24" id="home" src="assets/logo-dark.svg" />
       <ul class="list-none">
         <a class="anchor m-2" href="#">Products</a>
         <a class="anchor m-2" href="#">Developers</a>
@@ -36,7 +33,7 @@
         Sign up
       </button>
     </nav>
-    <main class="my-10 flex flex-col w-full max-w-6xl items-center">
+    <main class="mt-10 flex flex-col w-full max-w-6xl items-center">
       <div class="hero-cont my-10">
         <div class="two-col max-h-[600px]">
           <div class="col-left">
@@ -51,7 +48,7 @@
                 Start now
                 <img src="assets/arrow-right-light.svg" />
               </button>
-              <button class="tbutton ml-10 with-icon">
+              <button class="tbutton text-[#8a2fff] ml-10 with-icon">
                 Contact sales <img src="assets/arrow-right-purple.svg" />
               </button>
             </div>
@@ -112,7 +109,7 @@
           </div>
         </div>
         <button class="pbutton with-icon bg-purplish-700 mt-3">
-          Start now<img src="assets/arrow-right-purple.svg" />
+          Start now<img src="assets/arrow-right-light.svg" />
         </button>
       </section>
       <section class="graphic-section w-full max-w-6xl mt-20 mb-20">
@@ -123,15 +120,17 @@
           <img src="assets/dash.png" id="dash" />
         </div>
       </section>
-      <section class="max-w-6xl w-full flex flex-col">
+      <section
+        class="before:w-[2000px] before:absolute before:bg-gradient-to-tr from-[#0b2238] to-[#6465d9] before:h-[900px] before:top-0 before:-left-[400px] before:-skew-y-6 before:-z-10 max-w-6xl w-full flex flex-col relative mt-34"
+      >
         <div class="two-col">
           <div class="col-left">
             <div>
               <p class="subtitle2 mb-8">Designed for engineers</p>
-              <h2 class="h2 font-semibold mb-6">
+              <h2 class="h2 text-slate-200 font-semibold mb-6">
                 The world's best and most intuitive APIs
               </h2>
-              <p class="par">
+              <p class="par text-slate-300">
                 We abstract the hard stuff away so your teams don't can focus on
                 building good technology, instead of spending time and money
                 reinventing the wheel.
@@ -145,8 +144,8 @@
             <div class="cards-cont flex my-6">
               <div class="card">
                 <img class="scale-75" src="assets/tools-icon.png" id="tools" />
-                <h4 class="h4 my-5">Tools for all stacks</h4>
-                <p class="parsmall mb-5 text-lg">
+                <h4 class="h4 text-slate-200 my-5">Tools for all stacks</h4>
+                <p class="parsmall text-slate-400 mb-5 text-lg">
                   We offer front and back end libraries in some of the most
                   widely used technologies, old and new.
                 </p>
@@ -156,8 +155,8 @@
               </div>
               <div class="card">
                 <img class="scale-75" src="assets/cube-icon.png" id="tools" />
-                <h4 class="h4 my-5">Custom Integrations</h4>
-                <p class="parsmall mb-5 text-lg">
+                <h4 class="h4 text-slate-200 my-5">Custom Integrations</h4>
+                <p class="parsmall mb-5 text-slate-400 text-lg">
                   Use integrations for systems like Shopify, WooCommerce,
                   NetSuite, and more.
                 </p>
@@ -178,8 +177,10 @@
       </section>
       <section class="section-cont max-w-6xl w-full mt-16 mb-8">
         <div class="flex flex-col">
-          <p class="subtitle mb-8">Why Swipe</p>
-          <h2 class="h2 mb-8 font-semibold">A tech-first aproach to finance</h2>
+          <p class="subtitle text-[#7f45af] mb-4 mt-6">Why Swipe</p>
+          <h2 class="h2 mb-8 mt-10 font-semibold">
+            A tech-first aproach to finance
+          </h2>
           <div class="cards-grid grid grid-cols-4 px-5">
             <div class="card">
               <img class="scale-75" src="assets/cloud-icon.png" />
@@ -282,7 +283,7 @@
             <div>
               <p class="subtitle mb-8">Virtual events</p>
               <h2 class="h2 font-semibold mb-6">Check out Sessions now!</h2>
-              <p class="par">
+              <p class="par max-w-md">
                 Swipe Sessions is our annual conference - it's now available to
                 watch on demand! Check it out and become an "internet economy"
                 genius, and see how Swipe can transform the way you do business
@@ -321,7 +322,92 @@
           </div>
         </div>
       </section>
+      <section class="mt-32 max-w-6xl">
+        <div class="two-col justify-start">
+          <div>
+            <div class="col-left">
+              <h1 class="h3 mb-6 font-semibold">What are you waiting for?</h1>
+              <p class="par max-w-md">
+                Explore <a class="anchor" href="#home">Swipe</a> now, or create
+                an account and start accepting payments today! If you need a
+                custom package for your business, let's chat today.
+              </p>
+              <button class="pbutton with-icon hover:bg-slate-500 my-10">
+                Start now <img src="assets/arrow-right-light.svg" />
+              </button>
+            </div>
+          </div>
+          <div
+            class="ml-32 flex flex-row items-start justify-center max-w-[50%]"
+          >
+            <div class="card max-w-[50%]">
+              <img class="scale-[0.65]" src="assets/shield-icon.png" />
+              <h4 class="h4 text-xl mb-2">Always know what you pay</h4>
+              <p class="parsmall mb-5 text-lg">
+                Integrated per-transaction pricing with no hidden fees.
+              </p>
+              <button class="tbutton with-icon">
+                Pricing details<img src="assets/arrow-right-dark.svg" />
+              </button>
+            </div>
+
+            <div class="card max-w-[50%]">
+              <img class="scale-[0.65]" src="assets/bars-icon.png" />
+              <h4 class="h4 text-xl mb-2">Start your integration</h4>
+              <p class="parsmall mb-5 text-lg">
+                Get up and running with Stripe in as little as 10 minutes.
+              </p>
+              <button class="tbutton with-icon">
+                API reference<img src="assets/arrow-right-dark.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer
+        class="before:absolute before:h-[300px] before:w-[2500px] before:bg-gradient-to-tr from-slate-100 to-slate-400 before:bottom-[50px] before:left-[-600px] before:top-[15px] before:-skew-y-3 before:-z-10 max-w-6xl w-full pt-16 pb-8 mt-16 relative"
+      >
+        <div class="flex justify-center items-start col">
+          <div class="flex flex-col items-start justify-center w-full col">
+            <img class="pb-5" src="assets/logo-dark.svg" />
+            <div class="flex items-center justify-center">
+              <img class="scale-50" src="assets/location-icon.png" />
+              <p class="parsmall w-full">United States</p>
+            </div>
+            <div class="flex items-center">
+              <img class="scale-50" src="assets/comment-icon.png" />
+              <p class="parsmall">English (US)</p>
+            </div>
+          </div>
+          <div class="flex flex-col w-full col">
+            <a class="firstlink">Products</a>
+            <a class="anchorfooter">Atlas</a>
+            <a class="anchorfooter">Billing</a>
+            <a class="anchorfooter">Invoicing</a>
+            <a class="anchorfooter">Payments</a>
+            <a class="anchorfooter">Checkout</a>
+            <a class="anchorfooter">Identity</a>
+          </div>
+          <div class="flex flex-col w-full col">
+            <a class="firstlink">Use Cases</a>
+            <a class="anchorfooter">eCommerce</a>
+            <a class="anchorfooter">SaaS</a>
+            <a class="anchorfooter">Marketplaces</a>
+            <a class="anchorfooter">Embedded Finance</a>
+            <a class="anchorfooter">Crypto</a>
+            <a class="anchorfooter">Creator Economy</a>
+          </div>
+          <div class="flex flex-col w-full col">
+            <a class="firstlink">Resources</a>
+            <a class="anchorfooter">Support Center</a>
+            <a class="anchorfooter">Guides</a>
+            <a class="anchorfooter">Blog</a>
+            <a class="anchorfooter">Licenses</a>
+            <a class="anchorfooter">Pryvacy & Terms</a>
+            <a class="anchorfooter">Cookie Settings</a>
+          </div>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
-<!--  -->
