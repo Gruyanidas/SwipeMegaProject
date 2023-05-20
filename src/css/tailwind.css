@@ -57,7 +57,7 @@ ul {
     hover:opacity-75;
   }
   .card {
-    @apply mr-5 flex flex-col items-start;
+    @apply mr-5 flex flex-col justify-center items-start;
   }
   .subtitle {
     @apply font-anek text-xl font-medium leading-6 text-purple-800;
@@ -132,8 +132,9 @@ ul {
     @apply flex flex-col justify-center items-center;
   }
   .anchorlist{
-    @apply text-slate-100;
+    @apply text-slate-100 hover:cursor-pointer hover:underline;
   }
+
 }
 
 ul > a:hover {
@@ -162,10 +163,10 @@ ul > a:hover {
 }
 
 #gradient-canvas {
-  --gradient-color-1: #b067f4;
-  --gradient-color-2: #fc5900;
-  --gradient-color-3: #a7bef9;
-  --gradient-color-4: #1f6e27;
+  --gradient-color-1: #FCCF31;
+  --gradient-color-2: #F55555;
+  --gradient-color-3: #333399;
+  --gradient-color-4: #FF00CC;
 };
 
 #sidegradient-canvas {
