@@ -164,8 +164,8 @@ ul > a:hover {
 
 #gradient-canvas {
   --gradient-color-1: #FCCF31;
-  --gradient-color-2: #F55555;
-  --gradient-color-3: #333399;
+  --gradient-color-2: #f06161;
+  --gradient-color-3: #6060d6;
   --gradient-color-4: #FF00CC;
 };
 
