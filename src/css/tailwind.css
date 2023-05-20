@@ -8,19 +8,6 @@
   box-sizing: border-box;
 }
 
-/* .footer::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 116px;
-  width: 500px;
-  background-color: red;
-  z-index: 10;
-} */
-/* ubaceno u layer components.pbutton {
-  @apply hover:bg-slate-500 font-roboto text-base tracking-wider font-semibold rounded-3xl bg-slate-800 border-none text-slate-300 py-2 px-5 duration-200;
-} */
-
 .with-icon {
   @apply flex justify-center items-center pr-3;
 }
@@ -98,10 +85,6 @@
     @apply h5 text-2xl font-semibold text-slate-700
 
   }
-}
-
-
-@layer base {
   .h2 {
     @apply font-anek font-medium text-5xl m-0 w-full tracking-widest;
   }
@@ -115,6 +98,7 @@
   .parsmall {
     @apply text-sm text-slate-500;
   }
+
 }
 
 ul > a:hover {
@@ -141,3 +125,11 @@ ul > a:hover {
 #dash {
   grid-area: dash;
 }
+
+#gradient-canvas {
+  --gradient-color-1:#8300fc;
+  --gradient-color-2:#fc5900;
+  --gradient-color-3: #20315d;
+  --gradient-color-4:#00c913;
+}
+

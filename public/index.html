@@ -17,9 +17,10 @@
     />
     <title>Swipe</title>
   </head>
-  <body class="flex flex-col items-center justify-start min-h-screen">
+  <body class="flex min-h-screen flex-col items-center justify-start">
+    <!-- HEADER SECTION VAZNO -->
     <nav
-      class="navbar flex items-center justify-around w-full max-w-6xl p-4 mb-5"
+      class="navbar mb-5 flex w-full max-w-6xl items-center justify-around p-4"
     >
       <img class="-translate-x-24" id="home" src="assets/logo-dark.svg" />
       <ul class="list-none">
@@ -33,7 +34,8 @@
         Sign up
       </button>
     </nav>
-    <main class="mt-10 flex flex-col w-full max-w-6xl items-center">
+    <main class="mt-10 flex w-full max-w-6xl flex-col items-center relative">
+      <canvas id="gradient-canvas" class="absolute w-[3000px] h-[800px] right-30 -top-60 -z-10 -skew-y-6"></canvas>
       <div class="hero-cont my-10">
         <div class="two-col max-h-[600px]">
           <div class="col-left">
@@ -48,14 +50,14 @@
                 Start now
                 <img src="assets/arrow-right-light.svg" />
               </button>
-              <button class="tbutton text-[#8a2fff] ml-10 with-icon">
+              <button class="tbutton with-icon ml-10 text-[#8a2fff]">
                 Contact sales <img src="assets/arrow-right-purple.svg" />
               </button>
             </div>
           </div>
           <div class="col-right">
             <img
-              class="scale-75 -translate-y-52 translate-x-5"
+              class="-translate-y-52 translate-x-5 scale-75"
               src="assets/hero-phone.png"
               alt="phone"
             />
@@ -65,7 +67,7 @@
       <div class="partners-section">
         <div class="section-container max-w-6xl">
           <div
-            class="grid grid-rows-2 grid-cols-4 scale-[80%] gap-y-4 gap-x-3 place-self-center -translate-x-16"
+            class="grid -translate-x-16 scale-[80%] grid-cols-4 grid-rows-2 gap-x-3 gap-y-4 place-self-center"
           >
             <img src="assets/amazon.png" />
             <img src="assets/instacart.png" />
@@ -79,7 +81,7 @@
         </div>
       </div>
       <section
-        class="unified-platform w-full max-w-6xl mt-16 mb-8 max-h-screen"
+        class="unified-platform mb-8 mt-16 max-h-screen w-full max-w-6xl"
       >
         <div class="w-1/2">
           <p class="subtitle mb-6">Unified platform</p>
@@ -108,11 +110,11 @@
             </p>
           </div>
         </div>
-        <button class="pbutton with-icon bg-purplish-700 mt-3">
+        <button class="pbutton with-icon mt-3 bg-purplish-700">
           Start now<img src="assets/arrow-right-light.svg" />
         </button>
       </section>
-      <section class="graphic-section w-full max-w-6xl mt-20 mb-20">
+      <section class="graphic-section mb-20 mt-20 w-full max-w-6xl">
         <div class="grid-container grid gap-12">
           <img src="assets/credit-card.png" id="credit-card" />
           <img src="assets/slack-invoice.png" id="invoice" />
@@ -121,13 +123,13 @@
         </div>
       </section>
       <section
-        class="before:w-[2000px] before:absolute before:bg-gradient-to-tr from-[#0b2238] to-[#6465d9] before:h-[900px] before:top-0 before:-left-[400px] before:-skew-y-6 before:-z-10 max-w-6xl w-full flex flex-col relative mt-34"
+        class="mt-34 relative flex w-full max-w-6xl flex-col from-[#0b2238] to-[#6465d9] before:absolute before:-left-[400px] before:top-0 before:-z-10 before:h-[900px] before:w-[2000px] before:-skew-y-6 before:bg-gradient-to-tr"
       >
         <div class="two-col">
           <div class="col-left">
             <div>
               <p class="subtitle2 mb-8">Designed for engineers</p>
-              <h2 class="h2 text-slate-200 font-semibold mb-6">
+              <h2 class="h2 mb-6 font-semibold text-slate-200">
                 The world's best and most intuitive APIs
               </h2>
               <p class="par text-slate-300">
@@ -136,16 +138,16 @@
                 reinventing the wheel.
               </p>
               <button
-                class="pbutton with-icon bg-bluish-400 text-slate-800 hover:bg-opacity-50 hover:bg-bluish-300 my-10"
+                class="pbutton with-icon my-10 bg-bluish-400 text-slate-800 hover:bg-bluish-300 hover:bg-opacity-50"
               >
                 Start now <img src="assets/arrow-right-dark.svg" />
               </button>
             </div>
-            <div class="cards-cont flex my-6">
+            <div class="cards-cont my-6 flex">
               <div class="card">
                 <img class="scale-75" src="assets/tools-icon.png" id="tools" />
-                <h4 class="h4 text-slate-200 my-5">Tools for all stacks</h4>
-                <p class="parsmall text-slate-400 mb-5 text-lg">
+                <h4 class="h4 my-5 text-slate-200">Tools for all stacks</h4>
+                <p class="parsmall mb-5 text-lg text-slate-400">
                   We offer front and back end libraries in some of the most
                   widely used technologies, old and new.
                 </p>
@@ -155,8 +157,8 @@
               </div>
               <div class="card">
                 <img class="scale-75" src="assets/cube-icon.png" id="tools" />
-                <h4 class="h4 text-slate-200 my-5">Custom Integrations</h4>
-                <p class="parsmall mb-5 text-slate-400 text-lg">
+                <h4 class="h4 my-5 text-slate-200">Custom Integrations</h4>
+                <p class="parsmall mb-5 text-lg text-slate-400">
                   Use integrations for systems like Shopify, WooCommerce,
                   NetSuite, and more.
                 </p>
@@ -168,16 +170,16 @@
           </div>
           <div class="col-right">
             <img
-              class="scale-90 mb-5 rounded-3xl"
+              class="mb-5 scale-90 rounded-3xl"
               src="assets/terminal-code.png"
             />
             <img class="scale-90 rounded-3xl" src="assets/api-code.png" />
           </div>
         </div>
       </section>
-      <section class="section-cont max-w-6xl w-full mt-16 mb-8">
+      <section class="section-cont mb-8 mt-16 w-full max-w-6xl">
         <div class="flex flex-col">
-          <p class="subtitle text-[#7f45af] mb-4 mt-6">Why Swipe</p>
+          <p class="subtitle mb-4 mt-6 text-[#7f45af]">Why Swipe</p>
           <h2 class="h2 mb-8 mt-10 font-semibold">
             A tech-first aproach to finance
           </h2>
@@ -222,13 +224,13 @@
         </div>
       </section>
       <section>
-        <div class="flex flex-col max-w-6xl w-full relative">
+        <div class="relative flex w-full max-w-6xl flex-col">
           <img
-            class="absolute left-40 -top-36 scale-[0.65] opacity-70 -z-10"
+            class="absolute -top-36 left-40 -z-10 scale-[0.65] opacity-70"
             src="assets/global-graphic.png"
           />
           <div class="max-w-2xl">
-            <p class="subtitle text-bluish-500 mb-4">Global scale</p>
+            <p class="subtitle mb-4 text-bluish-500">Global scale</p>
             <h2 class="h2 font-semibold leading-snug tracking-wide">
               A structure for global businesses
             </h2>
@@ -282,7 +284,7 @@
           <div class="col-left">
             <div>
               <p class="subtitle mb-8">Virtual events</p>
-              <h2 class="h2 font-semibold mb-6">Check out Sessions now!</h2>
+              <h2 class="h2 mb-6 font-semibold">Check out Sessions now!</h2>
               <p class="par max-w-md">
                 Swipe Sessions is our annual conference - it's now available to
                 watch on demand! Check it out and become an "internet economy"
@@ -290,31 +292,31 @@
                 online.
               </p>
               <button
-                class="pbutton with-icon bg-bluish-400 text-slate-800 hover:bg-opacity-50 hover:bg-bluish-300 my-10"
+                class="pbutton with-icon my-10 bg-bluish-400 text-slate-800 hover:bg-bluish-300 hover:bg-opacity-50"
               >
                 Start now <img src="assets/arrow-right-dark.svg" />
               </button>
             </div>
           </div>
           <div
-            class="col-right border border-solid pt-10 rounded-3xl shadow-2xl pr-0 relative bg-gradient-to-tr from-purplish-600 to-bluish-600 z-30 overflow-hidden"
+            class="col-right relative z-30 overflow-hidden rounded-3xl border border-solid bg-gradient-to-tr from-purplish-600 to-bluish-600 pr-0 pt-10 shadow-2xl"
           >
             <div class="flex items-center justify-center">
               <img class="scale-50" src="assets/swipe-sessions.png" />
             </div>
             <div class="flex flex-col items-start justify-center">
-              <div class="flex items-center scale-[0.6] relative">
+              <div class="relative flex scale-[0.6] items-center">
                 <img src="assets/avatar1.png" />
                 <img class="absolute left-32" src="assets/avatar2.png" />
               </div>
               <div
-                class="absolute h-2/3 bg-slate-50 w-full right-0 -bottom-16 rounded-b-3xl -z-10 -skew-y-6 sk shadow-2xl"
+                class="sk absolute -bottom-16 right-0 -z-10 h-2/3 w-full -skew-y-6 rounded-b-3xl bg-slate-50 shadow-2xl"
               ></div>
-              <div class="px-8 pb-12 w-1/2">
-                <p class="subtitle text-slate-700 pb-4 font-semibold">
+              <div class="w-1/2 px-8 pb-12">
+                <p class="subtitle pb-4 font-semibold text-slate-700">
                   Keynote
                 </p>
-                <p class="parsmall text-slate-700 font-semibold">
+                <p class="parsmall font-semibold text-slate-700">
                   Everything you need to know about the internet economy.
                 </p>
               </div>
@@ -332,17 +334,17 @@
                 an account and start accepting payments today! If you need a
                 custom package for your business, let's chat today.
               </p>
-              <button class="pbutton with-icon hover:bg-slate-500 my-10">
+              <button class="pbutton with-icon my-10 hover:bg-slate-500">
                 Start now <img src="assets/arrow-right-light.svg" />
               </button>
             </div>
           </div>
           <div
-            class="ml-32 flex flex-row items-start justify-center max-w-[50%]"
+            class="ml-32 flex max-w-[50%] flex-row items-start justify-center"
           >
             <div class="card max-w-[50%]">
               <img class="scale-[0.65]" src="assets/shield-icon.png" />
-              <h4 class="h4 text-xl mb-2">Always know what you pay</h4>
+              <h4 class="h4 mb-2 text-xl">Always know what you pay</h4>
               <p class="parsmall mb-5 text-lg">
                 Integrated per-transaction pricing with no hidden fees.
               </p>
@@ -353,7 +355,7 @@
 
             <div class="card max-w-[50%]">
               <img class="scale-[0.65]" src="assets/bars-icon.png" />
-              <h4 class="h4 text-xl mb-2">Start your integration</h4>
+              <h4 class="h4 mb-2 text-xl">Start your integration</h4>
               <p class="parsmall mb-5 text-lg">
                 Get up and running with Stripe in as little as 10 minutes.
               </p>
@@ -365,10 +367,10 @@
         </div>
       </section>
       <footer
-        class="before:absolute before:h-[300px] before:w-[2500px] before:bg-gradient-to-tr from-slate-100 to-slate-400 before:bottom-[50px] before:left-[-600px] before:top-[15px] before:-skew-y-3 before:-z-10 max-w-6xl w-full pt-16 pb-8 mt-16 relative"
+        class="relative mt-16 w-full max-w-6xl from-slate-100 to-slate-400 pb-8 pt-16 before:absolute before:bottom-[50px] before:left-[-600px] before:top-[15px] before:-z-10 before:h-[300px] before:w-[2500px] before:-skew-y-3 before:bg-gradient-to-tr"
       >
-        <div class="flex justify-center items-start col">
-          <div class="flex flex-col items-start justify-center w-full col">
+        <div class="col flex items-start justify-center">
+          <div class="col flex w-full flex-col items-start justify-center">
             <img class="pb-5" src="assets/logo-dark.svg" />
             <div class="flex items-center justify-center">
               <img class="scale-50" src="assets/location-icon.png" />
@@ -379,7 +381,7 @@
               <p class="parsmall">English (US)</p>
             </div>
           </div>
-          <div class="flex flex-col w-full col">
+          <div class="col flex w-full flex-col">
             <a class="firstlink">Products</a>
             <a class="anchorfooter">Atlas</a>
             <a class="anchorfooter">Billing</a>
@@ -388,7 +390,7 @@
             <a class="anchorfooter">Checkout</a>
             <a class="anchorfooter">Identity</a>
           </div>
-          <div class="flex flex-col w-full col">
+          <div class="col flex w-full flex-col">
             <a class="firstlink">Use Cases</a>
             <a class="anchorfooter">eCommerce</a>
             <a class="anchorfooter">SaaS</a>
@@ -397,7 +399,7 @@
             <a class="anchorfooter">Crypto</a>
             <a class="anchorfooter">Creator Economy</a>
           </div>
-          <div class="flex flex-col w-full col">
+          <div class="col flex w-full flex-col">
             <a class="firstlink">Resources</a>
             <a class="anchorfooter">Support Center</a>
             <a class="anchorfooter">Guides</a>
@@ -409,5 +411,6 @@
         </div>
       </footer>
     </main>
+    <script src="gradient.js"></script>
   </body>
 </html>
