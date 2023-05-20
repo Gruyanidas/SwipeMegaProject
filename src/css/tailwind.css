@@ -132,7 +132,7 @@ ul {
     @apply flex flex-col justify-center items-center;
   }
   .anchorlist{
-    @apply text-slate-300;
+    @apply text-slate-100;
   }
 }
 
