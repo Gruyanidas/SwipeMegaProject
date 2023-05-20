@@ -2,14 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+/* PREFLIGHT  */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .with-icon {
-  @apply flex justify-center items-center pr-3;
+  @apply flex items-center justify-center pr-3;
 }
 .with-icon:hover > img {
   @apply translate-x-1 duration-200 ease-out;
@@ -18,87 +50,85 @@
 /* layer components introduced */
 @layer components {
   .pbutton {
-    @apply hover:bg-purplish-400 font-roboto text-base tracking-wider font-semibold rounded-3xl bg-slate-800 border-none text-slate-300 py-2 px-5 duration-200;
+    @apply rounded-3xl border-none bg-slate-800 px-5 py-2 font-roboto text-base font-semibold tracking-wider text-slate-300 duration-200 hover:bg-purplish-400;
   }
   .tbutton {
-    @apply hover:opacity-75 font-roboto text-base tracking-wider font-semibold bg-transparent border-none text-slate-800 p-3
-    duration-200;
+    @apply border-none bg-transparent p-3 font-roboto text-base font-semibold tracking-wider text-slate-800 duration-200
+    hover:opacity-75;
   }
   .card {
-    @apply flex flex-col items-start mr-5;
+    @apply mr-5 flex flex-col items-start;
   }
   .subtitle {
-    @apply text-purple-800 font-anek font-medium text-base leading-6;
+    @apply font-anek text-xl font-medium leading-6 text-purple-800;
   }
-  
+
   .subtitle2 {
-    @apply text-blue-700 font-anek font-medium text-base leading-6;
+    @apply font-anek text-xl font-medium leading-6 text-blue-700;
   }
   .h1 {
-    @apply font-anek font-semibold text-8xl m-0 w-full;
+    @apply m-0 w-full font-anek text-8xl font-semibold;
     letter-spacing: -1px;
     line-height: 108px;
   }
-  
+  .h2 {
+    @apply m-0 w-full font-anek text-5xl font-medium tracking-widest;
+  }
+
   .h3 {
-    @apply font-anek font-medium text-4xl m-0 w-full;
+    @apply m-0 w-full font-anek text-4xl font-medium;
     line-height: 75px;
   }
-  
+
   .h5 {
-    @apply font-anek font-medium text-lg m-0 w-full;
+    @apply m-0 w-full font-anek text-lg font-medium;
     letter-spacing: 0.25px;
   }
-  
+
   .h6 {
-    @apply font-anek font-medium text-sm m-0 w-full;
+    @apply m-0 w-full font-anek text-sm font-medium;
     letter-spacing: 0.25px;
   }
   .stat-card {
-    @apply pl-2 border-l-2 h-full border-solid border-bluish-500;
+    @apply h-full border-l-2 border-solid border-bluish-500 pl-2;
   }
   .anchor {
-    @apply no-underline text-lg font-medium duration-300 ease-linear hover:text-slate-800;
+    @apply text-lg font-medium no-underline duration-300 ease-linear hover:text-slate-800;
     color: #7000ff;
   }
 
-  .anchorfooter{
-    @apply no-underline text-sm text-slate-500 font-semibold duration-100 ease-linear hover:text-slate-900 cursor-pointer my-1;
+  .anchorfooter {
+    @apply my-1 cursor-pointer text-sm font-semibold text-slate-500 no-underline duration-100 ease-linear hover:text-slate-900;
   }
 
   .two-col {
-    @apply flex box-border w-full max-w-6xl items-start justify-center;
+    @apply box-border flex max-h-screen w-full max-w-6xl items-start justify-center;
   }
-  
+
   .two-col > .col-left {
-    @apply box-border w-1/2 pr-4 flex flex-col;
+    @apply box-border flex w-1/2 flex-col pr-4;
   }
   .two-col > .col-right {
-    @apply box-border w-1/2 pl-4 flex flex-col;
+    @apply box-border flex w-1/2 flex-col pl-4;
   }
 
   .col {
-    @apply mx-10
+    @apply mx-10;
   }
 
   .firstlink {
-    @apply h5 text-2xl font-semibold text-slate-700
-
-  }
-  .h2 {
-    @apply font-anek font-medium text-5xl m-0 w-full tracking-widest;
+    @apply h5 text-2xl font-semibold text-slate-700;
   }
   .par {
-    @apply text-lg font-roboto leading-7 my-4;
+    @apply my-4 font-roboto text-lg leading-7 text-slate-800;
   }
   .h4 {
-    @apply font-anek font-medium text-3xl m-0 w-full;
+    @apply m-0 w-full font-anek text-3xl font-medium;
     letter-spacing: 0.25px;
   }
   .parsmall {
-    @apply text-sm text-slate-500;
+    @apply text-sm text-slate-600;
   }
-
 }
 
 ul > a:hover {
@@ -127,9 +157,8 @@ ul > a:hover {
 }
 
 #gradient-canvas {
-  --gradient-color-1:#8300fc;
-  --gradient-color-2:#fc5900;
+  --gradient-color-1: #8300fc;
+  --gradient-color-2: #fc5900;
   --gradient-color-3: #20315d;
-  --gradient-color-4:#00c913;
+  --gradient-color-4: #00c913;
 }
-
