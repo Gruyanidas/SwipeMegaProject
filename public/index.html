@@ -20,7 +20,7 @@
   <body class="flex min-h-screen flex-col items-center justify-start xs:mx-4">
     <!-- HEADER SECTION VAZNO -->
     <nav
-      class="xs:w-full navbar mb-5 flex w-full max-w-6xl items-center justify-between p-4 xs:mb-2 xs:h-[100px] xs:scale-90 xs:justify-between"
+      class="navbar mb-5 flex w-full max-w-6xl items-center justify-between p-4 xs:mb-2 xs:h-[100px] xs:w-full xs:scale-90 xs:justify-between"
     >
       <img
         class="-translate-x-24 xs:translate-x-0"
@@ -37,13 +37,29 @@
       <button class="pbutton opacity-25 hover:bg-slate-800 hover:opacity-50">
         Sign up
       </button>
-      <div id="burger" class="xs:w-[30px] xs:h-[30px]">
-        <img src="assets/burger-menu.png">
+      <div id="burger" class="xs:h-[30px] xs:w-[30px]">
+        <img src="assets/burger-menu.png" />
       </div>
     </nav>
     <main
       class="relative mt-10 flex w-full max-w-6xl flex-col items-center xs:mt-0"
     >
+    <!-- DRAWER SECTION VAZNO -->
+      <aside class="absolute -right-2 top-0 flex h-[450px] w-4/5 rounded-l-3xl">
+        <div
+          class="h-[450px] w-full bg-gradient-to-tl from-[#fc5900] via-[#1f6e27] to-[#6b21a8] rounded-l-3xl"
+        ></div>
+        <div class="absolute z-10 h-[300px] w-4/5 bg-slate-800 px-8 rounded-tl-3xl opacity-25">
+        </div>
+        <ul class="mt-10 flex list-none flex-col mix-blend-screen pl-10 absolute">
+          <a class="anchor anchorlist m-2 " href="#">Products</a>
+          <a class="anchor anchorlist m-2" href="#">Developers</a>
+          <a class="anchor anchorlist m-2" href="#">Resources</a>
+          <a class="anchor anchorlist m-2" href="#">Pricing</a>
+          <a class="anchor anchorlist m-2" href="#">Solutions</a>
+        </ul>
+        <!-- <canvas id="sidegradient-canvas" class="z-0 h-[450px] w-full"></canvas> -->
+      </aside>
       <canvas
         id="gradient-canvas"
         class="right-30 absolute -top-60 -z-10 h-[800px] w-[3000px] -skew-y-6 xs:-translate-y-20"
@@ -102,7 +118,7 @@
       >
         <div class="w-1/2 xs:w-full">
           <p class="subtitle mb-6 xs:text-center">Unified platform</p>
-          <h2 class="h2 xs:h3 xs:text-center prose prose-stone mb-6">
+          <h2 class="h2 xs:h3 prose prose-stone mb-6 xs:text-center">
             All the payment products you'll ever need
           </h2>
         </div>
@@ -172,8 +188,12 @@
                     src="assets/tools-icon.png"
                     id="tools"
                   />
-                  <h4 class="h4 xs:text-center my-5 text-slate-200">Tools for all stacks</h4>
-                  <p class="parsmall xs:text-center mb-5 text-lg text-slate-400">
+                  <h4 class="h4 my-5 text-slate-200 xs:text-center">
+                    Tools for all stacks
+                  </h4>
+                  <p
+                    class="parsmall mb-5 text-lg text-slate-400 xs:text-center"
+                  >
                     We offer front and back end libraries in some of the most
                     widely used technologies, old and new.
                   </p>
@@ -183,11 +203,13 @@
                 </div>
                 <div class="card">
                   <img class="scale-75" src="assets/cube-icon.png" id="tools" />
-                  <h4 class="h4 xs:text-center my-5 text-slate-200 xs:text-slate-800">
+                  <h4
+                    class="h4 my-5 text-slate-200 xs:text-center xs:text-slate-800"
+                  >
                     Custom Integrations
                   </h4>
                   <p
-                    class="xs:text-center parsmall mb-5 text-lg text-slate-400 xs:text-slate-700"
+                    class="parsmall mb-5 text-lg text-slate-400 xs:text-center xs:text-slate-700"
                   >
                     Use integrations for systems like Shopify, WooCommerce,
                     NetSuite, and more.
@@ -267,9 +289,11 @@
             src="assets/global-graphic.png"
           />
           <div class="max-w-2xl">
-            <p class="xs:text-center subtitle mb-4 text-bluish-500">Global scale</p>
+            <p class="subtitle mb-4 text-bluish-500 xs:text-center">
+              Global scale
+            </p>
             <h2
-              class="h2 xs:text-center prose prose-stone font-semibold leading-snug tracking-wide xs:leading-[2.7rem]"
+              class="h2 prose prose-stone font-semibold leading-snug tracking-wide xs:text-center xs:leading-[2.7rem]"
             >
               A structure for global businesses
             </h2>
@@ -310,7 +334,9 @@
                 <p class="h4 prose prose-stone">135+</p>
               </div>
             </div>
-            <p class="par xs:text-center">currencies and payment methods supported</p>
+            <p class="par xs:text-center">
+              currencies and payment methods supported
+            </p>
           </div>
           <div class="small-card">
             <div class="mb-3">
@@ -331,7 +357,7 @@
             <div>
               <p class="subtitle mb-8 xs:text-center">Virtual events</p>
               <h2
-                class="h2 prose prose-stone mb-6 font-semibold xs:leading-[2.7rem] xs:text-center"
+                class="h2 prose prose-stone mb-6 font-semibold xs:text-center xs:leading-[2.7rem]"
               >
                 Check out Sessions now!
               </h2>
@@ -378,11 +404,13 @@
       <section class="mb-16 mt-32 xs:mb-8 xs:mt-10">
         <div class="two-col xs:flex-col xs:items-center xs:justify-center">
           <div class="col-left xs:mx-8 xs:w-full xs:pr-0">
-            <div class="xs:items-center xs:flex xs:flex-col">
-              <h1 class="h3 prose prose-stone mb-6 xs:text-center font-semibold">
+            <div class="xs:flex xs:flex-col xs:items-center">
+              <h1
+                class="h3 prose prose-stone mb-6 font-semibold xs:text-center"
+              >
                 What are you waiting for?
               </h1>
-              <p class="par xs:text-center max-w-full">
+              <p class="par max-w-full xs:text-center">
                 Explore <a class="anchor" href="#home">Swipe</a> now, or create
                 an account and start accepting payments today! If you need a
                 custom package for your business, let's chat today.
@@ -406,7 +434,7 @@
               <h4 class="h4 prose prose-stone mb-2 text-xl xs:text-center">
                 Always know what you pay
               </h4>
-              <p class="parsmall mb-5 xs:text-center text-lg">
+              <p class="parsmall mb-5 text-lg xs:text-center">
                 Integrated per-transaction pricing with no hidden fees.
               </p>
               <button class="tbutton with-icon xs:mt-0">
@@ -419,8 +447,10 @@
                 class="scale-[0.65] xs:scale-50"
                 src="assets/bars-icon.png"
               />
-              <h4 class="h4 mb-2 text-xl xs:text-center">Start your integration</h4>
-              <p class="parsmall mb-5 xs:text-center text-lg">
+              <h4 class="h4 mb-2 text-xl xs:text-center">
+                Start your integration
+              </h4>
+              <p class="parsmall mb-5 text-lg xs:text-center">
                 Get up and running with Stripe in as little as 10 minutes.
               </p>
               <button class="tbutton with-icon xs:mt-0">
@@ -487,6 +517,6 @@
         </div>
       </footer>
     </main>
-    <script src="gradient.js"></script>
+    <!-- <script src="gradient.js"></script> -->
   </body>
 </html>

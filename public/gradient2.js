@@ -829,10 +829,10 @@ class Gradient {
    */
   initGradientColors() {
     this.sectionColors = [
-      "--gradient-color-1",
-      "--gradient-color-2",
-      "--gradient-color-3",
-      "--gradient-color-4",
+      "--gradient2-color-1",
+      "--gradient2-color-2",
+      "--gradient2-color-3",
+      "--gradient2-color-4",
     ]
       .map((cssPropertyName) => {
         let hex = this.computedCanvasStyle
@@ -868,6 +868,4 @@ class Gradient {
  * Gradient.updateFrequency(freq)
  */
 var gradient = new Gradient();
-gradient.initGradient("#gradient-canvas");
-var sidegradient = new Gradient();
-sidegradient.initGradient("#sidegradient-canvas");
+gradient.initGradient("#gradient-canvas2");

@@ -129,7 +129,10 @@ ul {
     @apply text-sm text-slate-600;
   }
   .card {
-    @apply flex flex-col justify-center items-center
+    @apply flex flex-col justify-center items-center;
+  }
+  .anchorlist{
+    @apply text-slate-300;
   }
 }
 
@@ -159,8 +162,15 @@ ul > a:hover {
 }
 
 #gradient-canvas {
-  --gradient-color-1: #8300fc;
+  --gradient-color-1: #b067f4;
   --gradient-color-2: #fc5900;
-  --gradient-color-3: #20315d;
-  --gradient-color-4: #00c913;
-}
+  --gradient-color-3: #a7bef9;
+  --gradient-color-4: #1f6e27;
+};
+
+#sidegradient-canvas {
+  --gradient2-color-1: #aaf530;
+  --gradient2-color-2: #30b3f9;
+  --gradient2-color-3: #e66920;
+  --gradient2-color-4: #660d63;
+};
