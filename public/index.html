@@ -17,13 +17,17 @@
     />
     <title>Swipe</title>
   </head>
-  <body class="flex min-h-screen flex-col items-center justify-start">
+  <body class="flex min-h-screen flex-col items-center justify-start xs:mx-4">
     <!-- HEADER SECTION VAZNO -->
     <nav
-      class="navbar mb-5 flex w-full max-w-6xl items-center justify-around p-4"
+      class="navbar mb-5 flex w-full max-w-6xl items-center justify-around p-4 xs:mb-2 xs:h-[100px] xs:scale-75 xs:justify-between"
     >
-      <img class="-translate-x-24" id="home" src="assets/logo-dark.svg" />
-      <ul class="list-none">
+      <img
+        class="-translate-x-24 xs:translate-x-0"
+        id="home"
+        src="assets/logo-dark.svg"
+      />
+      <ul class="list-none xs:collapse">
         <a class="anchor m-2" href="#">Products</a>
         <a class="anchor m-2" href="#">Developers</a>
         <a class="anchor m-2" href="#">Resources</a>
@@ -34,16 +38,18 @@
         Sign up
       </button>
     </nav>
-    <main class="relative mt-10 flex w-full max-w-6xl flex-col items-center">
+    <main
+      class="relative mt-10 flex w-full max-w-6xl flex-col items-center xs:mt-0"
+    >
       <canvas
         id="gradient-canvas"
-        class="right-30 absolute -top-60 -z-10 h-[800px] w-[3000px] -skew-y-6"
+        class="right-30 absolute -top-60 -z-10 h-[800px] w-[3000px] -skew-y-6 xs:-translate-y-20"
       ></canvas>
       <!-- PAYMENTS SECTION VAZNO -->
-      <div class="hero-cont my-10">
-        <div class="two-col">
-          <div class="col-left">
-            <h1 class="h1 prose prose-stone">
+      <div class="my-10 xs:my-4">
+        <div class="two-col xs:justify-start">
+          <div class="col-left xs:flex xs:w-full xs:flex-col">
+            <h1 class="h1 prose prose-stone xs:text-5xl">
               Payments infrastructure for the world
             </h1>
             <p class="par max-w-lg">
@@ -51,17 +57,17 @@
               to manage their businesses's entire financial transaction
               infrastructure online.
             </p>
-            <div class="button-cont my-4 flex items-center justify-start">
+            <div class="my-4 flex items-center justify-start">
               <button class="pbutton with-icon hover:bg-slate-500">
                 Start now
                 <img src="assets/arrow-right-light.svg" />
               </button>
-              <button class="tbutton with-icon ml-10 text-[#8a2fff]">
+              <button class="tbutton with-icon ml-10 text-[#8a2fff] xs:ml-0.5">
                 Contact sales <img src="assets/arrow-right-purple.svg" />
               </button>
             </div>
           </div>
-          <div class="col-right">
+          <div class="col-right xs:collapse">
             <img
               class="-translate-y-52 translate-x-5 scale-75"
               src="assets/hero-phone.png"
@@ -72,9 +78,9 @@
       </div>
       <!-- PARTNERS VAZNO -->
       <div class="partners-section">
-        <div class="section-container mt-10 max-w-6xl">
+        <div class="section-container mt-10 max-w-6xl xs:mt-12">
           <div
-            class="grid -translate-x-16 scale-[80%] grid-cols-4 grid-rows-2 gap-x-3 gap-y-4 place-self-center"
+            class="grid -translate-x-16 scale-[80%] grid-cols-4 grid-rows-2 gap-x-3 gap-y-4 place-self-center xs:translate-x-0 xs:scale-110"
           >
             <img src="assets/amazon.png" />
             <img src="assets/instacart.png" />
@@ -89,17 +95,17 @@
       </div>
       <!-- UNIFIED PLATFORM VAZNO -->
       <section
-        class="unified-platform mb-8 mt-16 max-h-screen w-full max-w-6xl"
+        class="unified-platform mb-8 mt-16 max-h-screen w-full max-w-6xl xs:mb-4 xs:mt-12"
       >
-        <div class="w-1/2">
+        <div class="w-1/2 xs:w-full">
           <p class="subtitle mb-6">Unified platform</p>
-          <h2 class="h2 prose prose-stone mb-6">
+          <h2 class="h2 xs:h3 prose prose-stone mb-6">
             All the payment products you'll ever need
           </h2>
         </div>
-        <div class="two-col">
-          <div class="col-left">
-            <p class="par">
+        <div class="two-col xs:flex-col">
+          <div class="col-left xs:w-full xs:pr-0">
+            <p class="par xs:mb-2">
               We've got everything you'll need and more to build websites and
               apps that handle payments, payouts, and much more. Swipe’s
               products power payments for
@@ -111,7 +117,7 @@
               >, and everything in between.
             </p>
           </div>
-          <div class="col-right">
+          <div class="col-right xs:w-full xs:pl-0">
             <p class="par">
               We also help companies tackle fraud, issue invoices, send virtual
               and physical cards, manage financing,
@@ -124,7 +130,7 @@
           Start now<img src="assets/arrow-right-light.svg" />
         </button>
       </section>
-      <section class="graphic-section mb-20 mt-20 w-full max-w-6xl">
+      <section class="graphic-section mb-20 mt-20 w-full max-w-6xl xs:collapse">
         <div class="grid-container grid gap-12">
           <img src="assets/credit-card.png" id="credit-card" />
           <img src="assets/slack-invoice.png" id="invoice" />
@@ -134,10 +140,10 @@
       </section>
       <!-- DESIGN FOR ENG VAZNO -->
       <section
-        class="mt-34 mb-36 relative flex w-full max-w-6xl flex-col from-[#0b2238] to-[#6465d9] before:absolute before:-left-[400px] before:top-0 before:-z-10 before:h-[900px] before:w-[2000px] before:-skew-y-6 before:bg-gradient-to-tr"
+        class="mt-34 relative mb-36 flex w-full max-w-6xl flex-col from-[#0b2238] to-[#6465d9] before:absolute before:-left-[400px] before:top-0 before:-z-10 before:h-[900px] before:w-[2000px] before:-skew-y-6 before:bg-gradient-to-tr xs:mb-8 xs:mt-16"
       >
-        <div class="two-col">
-          <div class="col-left">
+        <div class="two-col xs:max-h-screen">
+          <div class="col-left xs:w-full">
             <div>
               <p class="subtitle2 mb-8">Designed for engineers</p>
               <h2 class="h2 mb-6 font-semibold text-slate-200">
@@ -154,32 +160,43 @@
                 Start now <img src="assets/arrow-right-dark.svg" />
               </button>
             </div>
-            <div class="cards-cont my-6 flex">
-              <div class="card">
-                <img class="scale-75" src="assets/tools-icon.png" id="tools" />
-                <h4 class="h4 my-5 text-slate-200">Tools for all stacks</h4>
-                <p class="parsmall mb-5 text-lg text-slate-400">
-                  We offer front and back end libraries in some of the most
-                  widely used technologies, old and new.
-                </p>
-                <button class="tbutton with-icon text-bluish-400">
-                  See libraries<img src="assets/arrow-right-blue.svg" />
-                </button>
-              </div>
-              <div class="card">
-                <img class="scale-75" src="assets/cube-icon.png" id="tools" />
-                <h4 class="h4 my-5 text-slate-200">Custom Integrations</h4>
-                <p class="parsmall mb-5 text-lg text-slate-400">
-                  Use integrations for systems like Shopify, WooCommerce,
-                  NetSuite, and more.
-                </p>
-                <button class="tbutton with-icon text-bluish-400">
-                  Explore partners<img src="assets/arrow-right-blue.svg" />
-                </button>
+            <!-- CARDS CONT VAZNO -->
+            <div>
+              <div class="my-6 flex xs:my-0 xs:flex-col">
+                <div class="card">
+                  <img
+                    class="scale-75"
+                    src="assets/tools-icon.png"
+                    id="tools"
+                  />
+                  <h4 class="h4 my-5 text-slate-200">Tools for all stacks</h4>
+                  <p class="parsmall mb-5 text-lg text-slate-400">
+                    We offer front and back end libraries in some of the most
+                    widely used technologies, old and new.
+                  </p>
+                  <button class="tbutton with-icon text-bluish-400">
+                    See libraries<img src="assets/arrow-right-blue.svg" />
+                  </button>
+                </div>
+                <div class="card">
+                  <img class="scale-75" src="assets/cube-icon.png" id="tools" />
+                  <h4 class="h4 my-5 text-slate-200 xs:text-slate-800">
+                    Custom Integrations
+                  </h4>
+                  <p
+                    class="parsmall mb-5 text-lg text-slate-400 xs:text-slate-700"
+                  >
+                    Use integrations for systems like Shopify, WooCommerce,
+                    NetSuite, and more.
+                  </p>
+                  <button class="tbutton with-icon text-bluish-400">
+                    Explore partners<img src="assets/arrow-right-blue.svg" />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-right">
+          <div class="col-right xs:collapse">
             <img
               class="mb-5 scale-90 rounded-3xl"
               src="assets/terminal-code.png"
@@ -189,44 +206,48 @@
         </div>
       </section>
       <!-- WHY SWIPE SECTION VAZNO -->
-      <section class="w-full max-w-6xl mt-52 mb-16">
+      <section class="mb-16 mt-52 w-full max-w-6xl xs:mb-8 xs:mt-0">
         <div class="flex flex-col">
-          <p class="subtitle mb-4 mt-6 text-[#7f45af]">Why Swipe</p>
-          <h2 class="h2 prose prose-stone mb-8 mt-10 font-semibold">
+          <p class="subtitle mb-4 mt-6 text-[#7f45af] xs:mb-0 xs:text-center">
+            Why Swipe
+          </p>
+          <h2
+            class="h2 prose prose-stone mb-8 mt-10 font-semibold xs:mb-4 xs:mt-5 xs:text-center xs:leading-[2.7rem]"
+          >
             A tech-first aproach to finance
           </h2>
-          <div class="cards-grid grid grid-cols-4 px-5">
-            <div class="card">
+          <div class="grid grid-cols-1 grid-rows-4 px-5">
+            <div class="xs:card">
               <img class="scale-75" src="assets/cloud-icon.png" />
-              <h4 class="h4 my-5">Efficient Always</h4>
-              <p class="parsmall mb-5 text-lg">
+              <h4 class="h4 my-5 xs:text-center">Efficient Always</h4>
+              <p class="parsmall mb-5 text-lg xs:text-center">
                 We've optimized every level of the finance stack, from
                 integrations to prebuilt checkout flows - no detail has been
-                spared. .
+                spared.
               </p>
             </div>
-            <div class="card">
+            <div class="xs:card">
               <img class="scale-75" src="assets/cycle-icon.png" />
-              <h4 class="h4 my-5">Fast-Improving</h4>
-              <p class="parsmall mb-5 text-lg">
+              <h4 class="h4 my-5 xs:text-center">Fast-Improving</h4>
+              <p class="parsmall mb-5 text-lg xs:text-center">
                 We make constant updates and improvements to help you stay on
                 the cutting edge of your industry, deploying to production
                 around 20X per day!
               </p>
             </div>
-            <div class="card">
+            <div class="xs:card">
               <img class="scale-75" src="assets/shield-icon.png" />
-              <h4 class="h4 my-5">Tried and true</h4>
-              <p class="parsmall mb-5 text-lg">
+              <h4 class="h4 my-5 xs:text-center">Tried and true</h4>
+              <p class="parsmall mb-5 text-lg xs:text-center">
                 Our systems operate with 100% uptime, with scalability and
                 uptime as a guarantee. Swipe is super duper certified so don't
                 worry
               </p>
             </div>
-            <div class="card">
+            <div class="xs:card">
               <img class="scale-75" src="assets/bars-icon.png" />
-              <h4 class="h4 my-5">Crazy Optimized</h4>
-              <p class="parsmall mb-5 text-lg">
+              <h4 class="h4 my-5 xs:text-center">Crazy Optimized</h4>
+              <p class="parsmall mb-5 text-lg xs:text-center">
                 We use machine learning trained on billions of data points to
                 help optimize all products, from fraud to revenue recovery and
                 more.
@@ -237,17 +258,19 @@
       </section>
       <!-- GLOBAL SCALE VAZNO -->
       <section>
-        <div class="relative flex w-full max-w-6xl flex-col mt-34 mb-16">
+        <div class="mt-34 relative mb-16 flex w-full max-w-6xl flex-col">
           <img
-            class="absolute -top-36 left-40 -z-10 scale-[0.65] opacity-70"
+            class="absolute -top-36 left-40 -z-10 scale-[0.65] opacity-70 xs:left-10 xs:top-0 xs:scale-90 xs:opacity-40"
             src="assets/global-graphic.png"
           />
           <div class="max-w-2xl">
             <p class="subtitle mb-4 text-bluish-500">Global scale</p>
-            <h2 class="h2 prose prose-stone font-semibold leading-snug tracking-wide">
+            <h2
+              class="h2 prose prose-stone font-semibold leading-snug tracking-wide xs:leading-[2.7rem]"
+            >
               A structure for global businesses
             </h2>
-            <p class="par mb-40 max-w-md">
+            <p class="par mb-40 max-w-md xs:mb-8">
               Swipe makes moving money simple, borderless, and programmable -
               just like the rest of the internet. We have teams all over the
               world and we process billions and billions of dollars yearly for
@@ -257,14 +280,16 @@
             </p>
           </div>
         </div>
-        <div class="grid grid-cols-4">
+        <div class="grid grid-cols-4 xs:grid-cols-2 xs:grid-rows-2 xs:gap-4">
           <div class="small-card">
             <div class="mb-3">
               <div class="stat-card">
                 <p class="h4 prose prose-stone">250M+</p>
               </div>
             </div>
-            <p class="par">API requests each day, peaking at 15,000 requests a second.</p>
+            <p class="par">
+              API requests each day, peaking at 15,000 requests a second.
+            </p>
           </div>
           <div class="small-card">
             <div class="mb-3">
@@ -272,7 +297,9 @@
                 <p class="h4 prose prose-stone">97%</p>
               </div>
             </div>
-            <p class="par">of US adults have bought from businesses that use Swipe</p>
+            <p class="par">
+              of US adults have bought from businesses that use Swipe
+            </p>
           </div>
           <div class="small-card">
             <div class="mb-3">
@@ -288,17 +315,23 @@
                 <p class="h4 prose prose-stone">35+</p>
               </div>
             </div>
-            <p class="par">countries with local, acquiring, optimizing acceptance rates</p>
+            <p class="par">
+              countries with local, acquiring, optimizing acceptance rates
+            </p>
           </div>
         </div>
       </section>
       <!-- VIRTUAL EVENTS VAZNO -->
-      <section class="mt-32 mb-16">
-        <div class="two-col">
-          <div class="col-left">
+      <section class="mb-16 mt-32 xs:mb-8 xs:mt-10">
+        <div class="two-col xs:flex-col">
+          <div class="col-left xs:w-full">
             <div>
               <p class="subtitle mb-8">Virtual events</p>
-              <h2 class="h2 prose prose-stone mb-6 font-semibold">Check out Sessions now!</h2>
+              <h2
+                class="h2 prose prose-stone mb-6 font-semibold xs:leading-[2.7rem]"
+              >
+                Check out Sessions now!
+              </h2>
               <p class="par max-w-md">
                 Swipe Sessions is our annual conference - it's now available to
                 watch on demand! Check it out and become an "internet economy"
@@ -306,14 +339,14 @@
                 online.
               </p>
               <button
-                class="pbutton with-icon my-10 bg-bluish-400 text-slate-800 hover:bg-bluish-300 hover:bg-opacity-50"
+                class="pbutton with-icon my-10 bg-bluish-400 text-slate-800 hover:bg-bluish-300 hover:bg-opacity-50 xs:mt-0"
               >
                 Start now <img src="assets/arrow-right-dark.svg" />
               </button>
             </div>
           </div>
           <div
-            class="col-right relative z-30 overflow-hidden rounded-3xl border border-solid bg-gradient-to-tr from-purplish-600 to-bluish-600 pr-0 pt-10 shadow-2xl"
+            class="col-right relative z-30 overflow-hidden rounded-3xl border border-solid bg-gradient-to-tr from-purplish-600 to-bluish-600 pr-0 pt-10 shadow-2xl xs:w-full"
           >
             <div class="flex items-center justify-center">
               <img class="scale-50" src="assets/swipe-sessions.png" />
@@ -326,7 +359,7 @@
               <div
                 class="sk absolute -bottom-16 right-0 -z-10 h-2/3 w-full -skew-y-6 rounded-b-3xl bg-slate-50 shadow-2xl"
               ></div>
-              <div class="w-1/2 px-8 pb-12">
+              <div class="w-1/2 px-8 pb-12 xs:w-full">
                 <p class="subtitle pb-4 font-semibold text-slate-700">
                   Keynote
                 </p>
@@ -339,42 +372,55 @@
         </div>
       </section>
       <!-- WHAT ARE YOU WAITING FOR VAZNO -->
-      <section class="mt-16 mb-16 max-w-6xl">
-        <div class="two-col justify-start">
-          <div>
-            <div class="col-left">
-              <h1 class="h3 prose prose-stone mb-6 font-semibold">What are you waiting for?</h1>
-              <p class="par max-w-md">
+      <section class="mb-16 mt-32 xs:mb-8 xs:mt-10">
+        <div class="two-col xs:flex-col xs:items-center xs:justify-center">
+          <div class="col-left xs:mx-8 xs:w-full xs:pr-0">
+            <div>
+              <h1 class="h3 prose prose-stone mb-6 font-semibold">
+                What are you waiting for?
+              </h1>
+              <p class="par max-w-full">
                 Explore <a class="anchor" href="#home">Swipe</a> now, or create
                 an account and start accepting payments today! If you need a
                 custom package for your business, let's chat today.
               </p>
-              <button class="pbutton with-icon my-10 hover:bg-slate-500">
+              <button
+                class="pbutton with-icon my-10 hover:bg-slate-500 xs:my-5"
+              >
                 Start now <img src="assets/arrow-right-light.svg" />
               </button>
             </div>
           </div>
+
           <div
-            class="ml-32 flex max-w-[50%] flex-row items-start justify-center"
+            class="ml-32 flex max-w-[50%] flex-row items-center justify-center xs:mx-4 xs:my-0 xs:max-w-full xs:flex-col"
           >
-            <div class="card max-w-[50%]">
-              <img class="scale-[0.65]" src="assets/shield-icon.png" />
-              <h4 class="h4 prose prose-stone mb-2 text-xl">Always know what you pay</h4>
+            <div class="card max-w-[50%] xs:mb-4 xs:max-w-full">
+              <img
+                class="scale-[0.65] xs:scale-50"
+                src="assets/shield-icon.png"
+              />
+              <h4 class="h4 prose prose-stone mb-2 text-xl">
+                Always know what you pay
+              </h4>
               <p class="parsmall mb-5 text-lg">
                 Integrated per-transaction pricing with no hidden fees.
               </p>
-              <button class="tbutton with-icon">
+              <button class="tbutton with-icon xs:mt-0">
                 Pricing details<img src="assets/arrow-right-dark.svg" />
               </button>
             </div>
 
-            <div class="card max-w-[50%]">
-              <img class="scale-[0.65]" src="assets/bars-icon.png" />
+            <div class="card max-w-[50%] xs:max-w-full">
+              <img
+                class="scale-[0.65] xs:scale-50"
+                src="assets/bars-icon.png"
+              />
               <h4 class="h4 mb-2 text-xl">Start your integration</h4>
               <p class="parsmall mb-5 text-lg">
                 Get up and running with Stripe in as little as 10 minutes.
               </p>
-              <button class="tbutton with-icon">
+              <button class="tbutton with-icon xs:mt-0">
                 API reference<img src="assets/arrow-right-dark.svg" />
               </button>
             </div>
@@ -382,46 +428,58 @@
         </div>
       </section>
       <footer
-        class="relative mt-16 w-full max-w-6xl from-slate-100 to-slate-400 pb-8 pt-16 before:absolute before:bottom-[50px] before:left-[-600px] before:top-[15px] before:-z-10 before:h-[300px] before:w-[2500px] before:-skew-y-3 before:bg-gradient-to-tr"
+        class="relative mt-16 w-full max-w-6xl from-slate-100 to-slate-400 pb-8 pt-16 before:absolute before:bottom-[50px] before:left-[-600px] before:top-[15px] before:-z-10 before:h-[300px] before:w-[2500px] before:-skew-y-3 before:bg-gradient-to-tr xs:mt-4"
       >
-        <div class="col flex items-start justify-center">
-          <div class="col flex w-full flex-col items-start justify-center">
-            <img class="pb-5" src="assets/logo-dark.svg" />
-            <div class="flex items-center justify-center">
-              <img class="scale-50" src="assets/location-icon.png" />
-              <p class="parsmall w-full">United States</p>
+        <div
+          class="flex items-start justify-center xs:flex xs:flex-wrap xs:items-start xs:justify-start"
+        >
+          <div>
+            <div
+              class="col flex w-full flex-col items-start justify-center xs:collapse"
+            >
+              <img class="pb-5" src="assets/logo-dark.svg" />
+              <div class="flex items-center justify-center">
+                <img class="scale-50" src="assets/location-icon.png" />
+                <p class="parsmall w-full">United States</p>
+              </div>
+              <div class="flex items-center">
+                <img class="scale-50" src="assets/comment-icon.png" />
+                <p class="parsmall">English (US)</p>
+              </div>
             </div>
-            <div class="flex items-center">
-              <img class="scale-50" src="assets/comment-icon.png" />
-              <p class="parsmall">English (US)</p>
+          </div>
+          <div class="xs:mb-6">
+            <div class="col flex w-full flex-col">
+              <a class="firstlink">Products</a>
+              <a class="anchorfooter">Atlas</a>
+              <a class="anchorfooter">Billing</a>
+              <a class="anchorfooter">Invoicing</a>
+              <a class="anchorfooter">Payments</a>
+              <a class="anchorfooter">Checkout</a>
+              <a class="anchorfooter">Identity</a>
             </div>
           </div>
-          <div class="col flex w-full flex-col">
-            <a class="firstlink">Products</a>
-            <a class="anchorfooter">Atlas</a>
-            <a class="anchorfooter">Billing</a>
-            <a class="anchorfooter">Invoicing</a>
-            <a class="anchorfooter">Payments</a>
-            <a class="anchorfooter">Checkout</a>
-            <a class="anchorfooter">Identity</a>
+          <div class="xs:mb-6">
+            <div class="col flex w-full flex-col">
+              <a class="firstlink">Use Cases</a>
+              <a class="anchorfooter">eCommerce</a>
+              <a class="anchorfooter">SaaS</a>
+              <a class="anchorfooter">Marketplaces</a>
+              <a class="anchorfooter">Embedded Finance</a>
+              <a class="anchorfooter">Crypto</a>
+              <a class="anchorfooter">Creator Economy</a>
+            </div>
           </div>
-          <div class="col flex w-full flex-col">
-            <a class="firstlink">Use Cases</a>
-            <a class="anchorfooter">eCommerce</a>
-            <a class="anchorfooter">SaaS</a>
-            <a class="anchorfooter">Marketplaces</a>
-            <a class="anchorfooter">Embedded Finance</a>
-            <a class="anchorfooter">Crypto</a>
-            <a class="anchorfooter">Creator Economy</a>
-          </div>
-          <div class="col flex w-full flex-col">
-            <a class="firstlink">Resources</a>
-            <a class="anchorfooter">Support Center</a>
-            <a class="anchorfooter">Guides</a>
-            <a class="anchorfooter">Blog</a>
-            <a class="anchorfooter">Licenses</a>
-            <a class="anchorfooter">Pryvacy & Terms</a>
-            <a class="anchorfooter">Cookie Settings</a>
+          <div class="xs:mb-6">
+            <div class="col flex w-full flex-col">
+              <a class="firstlink">Resources</a>
+              <a class="anchorfooter">Support Center</a>
+              <a class="anchorfooter">Guides</a>
+              <a class="anchorfooter">Blog</a>
+              <a class="anchorfooter">Licenses</a>
+              <a class="anchorfooter">Pryvacy & Terms</a>
+              <a class="anchorfooter">Cookie Settings</a>
+            </div>
           </div>
         </div>
       </footer>

@@ -77,7 +77,6 @@ ul {
 
   .h3 {
     @apply m-0 w-full font-anek text-4xl font-medium;
-    line-height: 75px;
   }
 
   .h5 {
@@ -105,10 +104,10 @@ ul {
     @apply box-border flex max-h-screen w-full max-w-6xl items-start justify-center;
   }
 
-  .two-col > .col-left {
+  .col-left {
     @apply box-border flex w-1/2 flex-col pr-4;
   }
-  .two-col > .col-right {
+  .col-right {
     @apply box-border flex w-1/2 flex-col pl-4;
   }
 
@@ -128,6 +127,9 @@ ul {
   }
   .parsmall {
     @apply text-sm text-slate-600;
+  }
+  .card {
+    @apply flex flex-col justify-center items-center
   }
 }
 
