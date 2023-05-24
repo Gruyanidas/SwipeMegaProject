@@ -31,12 +31,12 @@
           src="assets/logo-dark.svg"
         />
       </div>
-      <ul class="list-none xs:collapse md:scale-90 3xl:scale-100">
-        <a class="anchor m-2" href="#">Products</a>
-        <a class="anchor m-2" href="#">Developers</a>
-        <a class="anchor m-2" href="#">Resources</a>
-        <a class="anchor m-2" href="#">Pricing</a>
-        <a class="anchor m-2" href="#">Solutions</a>
+      <ul id="nav-bar" class="list-none xs:collapse md:scale-90 3xl:scale-100">
+        <a id="anchor-products" class="anchor m-2" href="#products">Products</a>
+        <a class="anchor m-2" href="#developers">Developers</a>
+        <a class="anchor m-2" href="#resources">Resources</a>
+        <a class="anchor m-2" href="#pricing">Pricing</a>
+        <a class="anchor m-2" href="#solutions">Solutions</a>
       </ul>
       <div>
         <button class="pbutton opacity-25 hover:bg-slate-800 hover:opacity-50">
@@ -56,11 +56,19 @@
       <!-- DRAWER SECTION VAZNO -->
       <aside
         id="drawer"
-        class="collapse absolute -right-2 top-0 flex h-[450px] w-4/5 rounded-l-3xl"
+        class="absolute -right-4 top-0 hidden h-[450px] w-4/5 rounded-l-3xl"
       >
         <div
           class="relative h-[450px] w-full rounded-l-3xl bg-gradient-to-tl from-[#12C2E9] to-[#F64F59]"
-        ></div>
+        >
+          <ul class="absolute mt-10 flex list-none flex-col pl-10">
+            <a class="anchor anchorlist m-2" href="#products">Products</a>
+            <a class="anchor anchorlist m-2" href="#developers">Developers</a>
+            <a class="anchor anchorlist m-2" href="#resources">Resources</a>
+            <a class="anchor anchorlist m-2" href="#pricing">Pricing</a>
+            <a class="anchor anchorlist m-2" href="#solutions">Solutions</a>
+          </ul>
+        </div>
         <div
           id="drawer-closer"
           class="absolute right-0 top-0 h-[50px] w-[50px] hover:cursor-pointer hover:opacity-70"
@@ -71,18 +79,6 @@
           src="assets/logo-white.svg"
           class="absolute bottom-20 left-1/3 scale-125 scale-x-150 opacity-75"
         />
-        <div
-          class="absolute z-10 h-[300px] w-4/5 rounded-tl-3xl bg-slate-800 px-8 opacity-10 hover:opacity-25"
-        ></div>
-        <ul
-          class="absolute mt-10 flex list-none flex-col pl-10 mix-blend-screen"
-        >
-          <a class="anchor anchorlist m-2" href="#">Products</a>
-          <a class="anchor anchorlist m-2" href="#">Developers</a>
-          <a class="anchor anchorlist m-2" href="#">Resources</a>
-          <a class="anchor anchorlist m-2" href="#">Pricing</a>
-          <a class="anchor anchorlist m-2" href="#">Solutions</a>
-        </ul>
         <!-- <canvas id="sidegradient-canvas" class="z-0 h-[450px] w-full"></canvas> -->
       </aside>
       <canvas
@@ -142,6 +138,7 @@
       <!-- UNIFIED PLATFORM VAZNO -->
       <section
         class="unified-platform 3xl:mt-22 mb-8 mt-16 max-h-screen w-full max-w-6xl xs:mb-4 xs:mt-12"
+        id="resources"
       >
         <div class="w-1/2 xs:w-full md:mx-8">
           <p class="subtitle mb-6 xs:text-center 3xl:text-3xl">
@@ -192,6 +189,7 @@
       </section>
       <!-- DESIGN FOR ENG VAZNO -->
       <section
+        id="solutions"
         class="mt-34 relative mb-36 flex w-full max-w-6xl flex-col from-[#0b2238] to-[#6465d9] before:absolute before:-left-[400px] before:top-0 before:-z-10 before:h-[900px] before:w-[2000px] before:-skew-y-6 before:bg-gradient-to-tr xs:mb-8 xs:mt-16"
       >
         <div class="two-col xs:max-h-screen">
@@ -364,7 +362,7 @@
         </div>
       </section>
       <!-- GLOBAL SCALE VAZNO -->
-      <section>
+      <section id="developers">
         <div class="mt-34 relative mb-16 flex w-full max-w-6xl flex-col">
           <img
             class="absolute -top-36 left-40 -z-10 scale-[0.65] opacity-70 xs:left-10 xs:top-0 xs:scale-90 xs:opacity-40 md:left-20 md:top-40 md:opacity-50 3xl:scale-110 3xl:opacity-30"
@@ -437,7 +435,7 @@
         </div>
       </section>
       <!-- VIRTUAL EVENTS VAZNO -->
-      <section class="mb-16 mt-32 xs:mb-8 xs:mt-10 md:mt-16">
+      <section id="products" class="mb-16 mt-32 xs:mb-8 xs:mt-10 md:mt-16">
         <div class="two-col xs:flex-col md:flex-col">
           <div class="col-left xs:w-full md:w-full">
             <div>
@@ -489,7 +487,7 @@
         </div>
       </section>
       <!-- WHAT ARE YOU WAITING FOR VAZNO -->
-      <section class="mb-16 mt-32 xs:mb-8 xs:mt-10 md:mt-10">
+      <section id="pricing" class="mb-16 mt-32 xs:mb-8 xs:mt-10 md:mt-10">
         <div class="two-col xs:flex-col xs:items-center xs:justify-center">
           <div
             class="col-left xs:mx-8 xs:w-full xs:pr-0 md:ml-8 md:mr-2 md:w-full"
