@@ -14,6 +14,7 @@ const modalcloser = document.getElementById("modalbtncls");
 const modal = document.getElementById("modal");
 // const buttons = [...document.getElementsByTagName('button')];
 const button = document.getElementById("start-now");
+const overlay = document.querySelector(".overlay")
 
 // document.getElementsByClassName("anchor") VAZNO VRACA HTML COLLECTION KOJA MORA DA SE PREVEDE U ARRAYv SA SPREAD OPERATOROM
 //VAZNO Smooth scroll
@@ -47,11 +48,13 @@ closebtndrawer.addEventListener("click", closeDrawer);
 const openModal = function(){
   modal.classList.remove("opacity-0");
   modal.classList.add("opacity-100");
+  overlay.classList.remove("hidden")
 }
 
 const closeModal = function(){
   modal.classList.remove("opacity-100");
   modal.classList.add("opacity-0");
+  overlay.classList.add("hidden")
 }
 
 
