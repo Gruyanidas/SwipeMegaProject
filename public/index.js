@@ -10,23 +10,52 @@ const developers = document.querySelector("#developers");
 const products = document.querySelector("#products");
 const barlist = document.getElementById("nav-bar");
 const allLinks = [...document.getElementsByClassName("anchor")];
+const modalcloser = document.getElementById("modalbtncls");
+const modal = document.getElementById("modal");
+// const buttons = [...document.getElementsByTagName('button')];
+const button = document.getElementById("start-now");
 
 // document.getElementsByClassName("anchor") VAZNO VRACA HTML COLLECTION KOJA MORA DA SE PREVEDE U ARRAYv SA SPREAD OPERATOROM
+//VAZNO Smooth scroll
 
-allLinks.forEach((e)=> e.addEventListener("click", function (e) {
+allLinks.forEach((e) =>
+  e.addEventListener("click", function (e) {
     e.preventDefault();
-    const target = document.getElementById(this.getAttribute("href").substring(1));
+    const target = document.getElementById(
+      this.getAttribute("href").substring(1)
+    );
     target.scrollIntoView({ behavior: "smooth" });
   })
 );
 
+//VAZNO Drawer - side menu mob
 const openDrawer = function () {
-  drawer.classList.remove("hidden");
+  drawer.classList.remove("opacity-0");
+  drawer.classList.add("opacity-100");
 };
 
 const closeDrawer = function () {
-  drawer.classList.add("hidden");
+  drawer.classList.add("opacity-0");
+  drawer.classList.remove("opacity-100")
 };
 
 burger.addEventListener("click", openDrawer);
 closebtndrawer.addEventListener("click", closeDrawer);
+
+//VAZNO Modal
+
+const openModal = function(){
+  modal.classList.remove("opacity-0");
+  modal.classList.add("opacity-100");
+}
+
+const closeModal = function(){
+  modal.classList.remove("opacity-100");
+  modal.classList.add("opacity-0");
+}
+
+
+button.addEventListener('click', openModal);
+modalcloser.addEventListener('click', closeModal);
+
+
