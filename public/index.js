@@ -12,7 +12,7 @@ const barlist = document.getElementById("nav-bar");
 const allLinks = [...document.getElementsByClassName("anchor")];
 const modalcloser = document.getElementById("modalbtncls");
 const modal = document.getElementById("modal");
-// const buttons = [...document.getElementsByTagName('button')];
+const buttons = [...document.getElementsByTagName("button")];
 const button = document.getElementById("start-now");
 const overlay = document.querySelector(".overlay");
 const drawerlist = document.getElementById("drawer-list");
@@ -68,17 +68,13 @@ closebtndrawer.addEventListener("click", closeDrawer);
 //VAZNO Modal
 
 const openModal = function () {
-  modal.classList.remove("opacity-0");
-  modal.classList.add("opacity-100");
-  modal.classList.add("z-40");
+  modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 };
 
 const closeModal = function () {
-  modal.classList.remove("opacity-100");
-  modal.classList.add("opacity-0");
+  modal.classList.add("hidden");
   overlay.classList.add("hidden");
-  modal.classList.remove("z-40");
 };
 
 button.addEventListener("click", openModal);
@@ -100,3 +96,31 @@ const closeForm = function () {
 
 signupbtn.addEventListener("click", openForm);
 signupcls.addEventListener("click", closeForm);
+
+//funkcija za centriranje elementa bilo gde na straniciVAZNO
+
+const centering = function () {
+  var windowHeight = window.innerHeight;
+  var windowWidth = window.innerWidth;
+  var modalHeight = modal.offsetHeight;
+  var modalWidth = modal.offsetWidth;
+
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+  var topPosition = (windowHeight - modalHeight) / 2 + scrollTop;
+  var leftPosition = (windowWidth - modalWidth) / 2 + scrollLeft;
+
+  modal.style.top = topPosition + "px";
+  modal.style.left = leftPosition + "px";
+};
+
+buttons.forEach((e) => {
+  e.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (!e.target.className.includes("signupbtn")){
+      openModal();
+      centering();
+    }
+  });
+});
