@@ -118,9 +118,51 @@ const centering = function () {
 buttons.forEach((e) => {
   e.addEventListener("click", function (e) {
     e.preventDefault();
-    if (!e.target.className.includes("signupbtn")){
+    if (!e.target.className.includes("signupbtn") &&
+        !e.target.className.includes("transfers") &&
+        !e.target.className.includes("loans") &&
+        !e.target.className.includes("closing")){
       openModal();
       centering();
     }
   });
 });
+
+//VAZNO Operations section
+
+const tabs = document.querySelectorAll('.operation_tab');
+const tabContainer = document.querySelector('.btncontainer');
+const tabsContent = document.querySelectorAll('.content-cont');
+let activeTab = null;
+
+
+tabContainer.addEventListener('click', function(e){
+ //VAZNO tabs
+  const target = e.target.closest(".operation_tab");
+  console.log(target);
+  if(!target) return;
+  tabs.forEach(t=>t.classList.remove("-translate-y-2"));
+  target.classList.add("-translate-y-2");
+
+  // Chat GPT code:
+  if (activeTab) {
+    activeTab.classList.remove("flex");
+    activeTab.classList.add("hidden");
+  }
+
+  const contentToShow = document.querySelector(`.content-cont--${target.dataset.tab}`);
+  contentToShow.classList.remove("hidden");
+  contentToShow.classList.add("flex");
+  activeTab = contentToShow; 
+
+
+  // //Uklanjanje aktivne klase pre dodeljivanja
+  // tabsContent.forEach(e=>e.classList.remove("flex"));
+  // tabsContent.forEach(e=>e.classList.add("hidden"));
+
+  // //content area
+  // document.querySelector(`.content-cont--${target.dataset.tab}`).classList.remove("hidden");
+  // document.querySelector(`.content-cont--${target.dataset.tab}`).classList.add("flex");
+
+})
+
