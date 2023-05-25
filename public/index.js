@@ -14,20 +14,42 @@ const modalcloser = document.getElementById("modalbtncls");
 const modal = document.getElementById("modal");
 // const buttons = [...document.getElementsByTagName('button')];
 const button = document.getElementById("start-now");
-const overlay = document.querySelector(".overlay")
+const overlay = document.querySelector(".overlay");
+const drawerlist = document.getElementById("drawer-list");
+const signup = document.getElementById("sign-up");
+const signupcls = document.getElementById("sign-up-close");
+const signupbtn = document.getElementById("signupbtn");
+const signinbtn = document.getElementById("signinbtn");
 
 // document.getElementsByClassName("anchor") VAZNO VRACA HTML COLLECTION KOJA MORA DA SE PREVEDE U ARRAYv SA SPREAD OPERATOROM
 //VAZNO Smooth scroll
 
-allLinks.forEach((e) =>
-  e.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.getElementById(
-      this.getAttribute("href").substring(1)
-    );
-    target.scrollIntoView({ behavior: "smooth" });
-  })
-);
+//VAZNO Ovo je bolja opcija jer se eventlistener kaci na parent element a ne na svaki child element
+barlist.addEventListener("click", function (el) {
+  el.preventDefault();
+  if (el.target.classList.contains("anchor")) {
+    const id = el.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});
+
+drawerlist.addEventListener("click", function (el) {
+  el.preventDefault();
+  if (el.target.classList.contains("anchor")) {
+    const drawerid = el.target.getAttribute("href");
+    document.querySelector(drawerid).scrollIntoView({ behavior: "smooth" });
+  }
+});
+
+// allLinks.forEach((e) =>
+//   e.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     const target = document.getElementById(
+//       this.getAttribute("href").substring(1)
+//     );
+//     target.scrollIntoView({ behavior: "smooth" });
+//   })
+// );
 
 //VAZNO Drawer - side menu mob
 const openDrawer = function () {
@@ -37,7 +59,7 @@ const openDrawer = function () {
 
 const closeDrawer = function () {
   drawer.classList.add("opacity-0");
-  drawer.classList.remove("opacity-100")
+  drawer.classList.remove("opacity-100");
 };
 
 burger.addEventListener("click", openDrawer);
@@ -45,20 +67,36 @@ closebtndrawer.addEventListener("click", closeDrawer);
 
 //VAZNO Modal
 
-const openModal = function(){
+const openModal = function () {
   modal.classList.remove("opacity-0");
   modal.classList.add("opacity-100");
-  overlay.classList.remove("hidden")
-}
+  modal.classList.add("z-40");
+  overlay.classList.remove("hidden");
+};
 
-const closeModal = function(){
+const closeModal = function () {
   modal.classList.remove("opacity-100");
   modal.classList.add("opacity-0");
-  overlay.classList.add("hidden")
-}
+  overlay.classList.add("hidden");
+  modal.classList.remove("z-40");
+};
 
+button.addEventListener("click", openModal);
+modalcloser.addEventListener("click", closeModal);
 
-button.addEventListener('click', openModal);
-modalcloser.addEventListener('click', closeModal);
+//VAZNO SIGN UP FORM
 
+const openForm = function () {
+  signup.classList.remove("collapse");
+  signup.classList.add("z-50");
+  overlay.classList.remove("hidden");
+};
 
+const closeForm = function () {
+  signup.classList.add("collapse");
+  signup.classList.remove("z-50");
+  overlay.classList.add("hidden");
+};
+
+signupbtn.addEventListener("click", openForm);
+signupcls.addEventListener("click", closeForm);

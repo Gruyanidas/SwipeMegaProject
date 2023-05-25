@@ -38,7 +38,7 @@
         <a class="anchor m-2" href="#pricing">Pricing</a>
         <a class="anchor m-2" href="#solutions">Solutions</a>
       </ul>
-      <div>
+      <div id="signupbtn">
         <button class="pbutton opacity-25 hover:bg-slate-800 hover:opacity-50">
           Sign up
         </button>
@@ -56,12 +56,15 @@
       <!-- DRAWER SECTION VAZNO -->
       <aside
         id="drawer"
-        class="absolute -right-4 top-0 z-20 h-[450px] w-4/5 rounded-l-3xl opacity-0 transition-opacity duration-500"
+        class="absolute -right-4 top-0 z-20 h-[450px] w-4/5 rounded-l-3xl opacity-0 transition-opacity duration-500 md:collapse 3xl:collapse"
       >
         <div
           class="relative h-[450px] w-full rounded-l-3xl bg-gradient-to-tl from-[#12C2E9] to-[#F64F59]"
         >
-          <ul class="absolute mt-10 flex list-none flex-col pl-10">
+          <ul
+            id="drawer-list"
+            class="absolute mt-10 flex list-none flex-col pl-10"
+          >
             <a class="anchor anchorlist m-2" href="#products">Products</a>
             <a class="anchor anchorlist m-2" href="#developers">Developers</a>
             <a class="anchor anchorlist m-2" href="#resources">Resources</a>
@@ -85,24 +88,110 @@
         id="gradient-canvas"
         class="right-30 3xl:-top-100 absolute -top-60 -z-10 h-[800px] w-[3000px] -skew-y-6 xs:-translate-y-20 md:-translate-y-60"
       ></canvas>
+      <!-- SIGN UP FORM SECTION -->
+      <section id="sign-up" class="collapse absolute">
+        <form
+          class="flex min-h-[400px] w-full flex-col items-center justify-center gap-5 rounded-lg bg-gradient-to-tl from-[#12C2E9] to-[#F64F59] px-6 py-8"
+        >
+          <div
+            class="absolute right-0 top-0 h-[50px] w-[50px] hover:cursor-pointer hover:rounded-full hover:bg-slate-400 hover:opacity-70"
+            id="sign-up-close"
+          >
+            <img src="assets/cross.png" />
+          </div>
+          <div>
+            <img src="assets/logo-dark.svg" />
+          </div>
+          <div class="prose prose-stone text-center">
+            <h2>Create your SWIPE account today!</h2>
+            <p class="text-lg">Once created - we got you covered!</p>
+          </div>
+          <div class="prose prose-stone pb-2 font-semibold tracking-wider flex flex-col items-start">
+            <label for="name" id="name-label" class="pb-4">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              class="mt-2 rounded-md px-4 py-2"
+            />
+          </div>
+          <div class="prose prose-stone pb-2 font-semibold tracking-wider flex flex-col items-start">
+            <label for="name" id="name-label" class="pb-4">Second name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your surname"
+              class="mt-2 rounded-md px-4 py-2"
+            />
+          </div>
+          <div class="prose prose-stone pb-2 font-semibold tracking-wider flex flex-col items-start">
+            <label for="password" id="name-label" class="pb-4"
+              >Type your unique password</label
+            >
+            <input
+              type="password"
+              id="name"
+              name="name"
+              placeholder="Create your password"
+              class="mt-2 rounded-md px-4 py-2"
+            />
+          </div>
+          <div class="prose prose-stone font-semibold tracking-wider flex flex-col items-start">
+            <label for="email" id="email-label" class="pb-4">Email</label>
+            <input
+              name="email"
+              type="email"
+              id="email"
+              placeholder="Enter an email"
+              class="mt-2 rounded-md px-4 py-2"
+            />
+          </div>
+
+          <div
+            class="prose prose-stone mt-0 flex flex-col items-center justify-center pt-0 font-semibold tracking-wider"
+          >
+            <label for="number" id="number-label">Stay signed in</label>
+            <input
+              name="checkbox"
+              type="checkbox"
+              id="checkbox"
+              class="mt-2 scale-150 rounded-lg p-8 px-4"
+            />
+          </div>
+          <button
+            id="signinbtn" type="submit"
+            class="pbutton with-icon prose prose-stone my-5 bg-bluish-400 text-slate-800 hover:bg-bluish-300 hover:bg-opacity-50"
+          >
+            Sign in <img src="assets/arrow-right-dark.svg" />
+          </button>
+          <P class="prose text-center italic">
+            Note: demo version does not support any database related or similar functionality.
+          </P>
+        </form>
+      </section>
       <!-- PAYMENTS SECTION VAZNO -->
       <div class="my-10 xs:my-4 md:mx-8 md:mt-0 3xl:mt-0">
         <div class="two-col relative xs:justify-start">
           <!-- MODAL WINDOW VAZNO -->
           <div
             id="modal"
-            class="prose-zink prose absolute -bottom-40 z-30 h-1/2 w-full rounded-md border-2 border-slate-800 bg-slate-100 p-6 text-center text-lg font-semibold opacity-0 transition-opacity duration-500 md:h-1/4 md:w-1/2"
+            class="prose-zink prose absolute -bottom-40 z-30 h-1/2 w-full rounded-md border-2 border-slate-800 bg-slate-100 bg-gradient-to-tl from-[#12C2E9] to-[#F64F59] p-6 text-center text-lg font-semibold opacity-0 transition-opacity duration-500 md:h-1/4 md:w-1/2 3xl:rounded-3xl"
           >
             <div
               id="modalbtncls"
-              class="absolute right-0 top-0 h-[30px] w-[30px] rounded-md object-contain transition-opacity duration-500 hover:cursor-pointer hover:rounded-full hover:bg-slate-500 hover:opacity-70"
+              class="absolute right-0 top-0 h-[30px] w-[30px] rounded-md object-contain transition-opacity duration-500 hover:cursor-pointer hover:rounded-full hover:bg-slate-500 hover:opacity-70 3xl:h-[50px] 3xl:w-[50px] 3xl:scale-105 3xl:p-2"
             >
               <img class="m-0" src="assets/cross.png" />
             </div>
-            <p class="m-0">
-              Demo version doesn't support any external links or similar
-              functionality. Web site is for presentation purposes atm.
-            </p>
+            <div class="3xl:mt-6">
+              <h1 class="prose prose-slate 3xl:text-5xl">DEMO VERSION</h1>
+              <p class="m-0 md:text-base 3xl:text-2xl">
+                Demo version doesn't support any external links or similar
+                functionality. Web site is for presentation purposes atm.
+              </p>
+            </div>
           </div>
 
           <div class="col-left xs:flex xs:w-full xs:flex-col">
