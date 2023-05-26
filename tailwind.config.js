@@ -27,6 +27,9 @@ module.exports = {
         roboto: ["Roboto", "sans-serif"],
         anek: ["Anek Telugu", "sans-serif"],
       },
+      backgroundImage:{
+        "gradient" : "bg-gradient-to-tl from-[#12C2E9] to-[#F64F59]"
+      },
       colors: {
         green: {
           100: "#ccfaf9",

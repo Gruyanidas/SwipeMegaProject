@@ -15,7 +15,7 @@
     @apply rounded-3xl border-none bg-slate-800 px-5 py-2 font-roboto text-base font-semibold tracking-wider text-slate-300 duration-200 hover:bg-purplish-400;
   }
   .overlay {
-    @apply absolute top-0 left-0 w-full h-full backdrop-blur-sm backdrop-brightness-90 z-10;
+    @apply absolute left-0 top-0 z-10 h-full w-full backdrop-blur-sm backdrop-brightness-90;
   }
 
   .tbutton {
@@ -23,7 +23,7 @@
     hover:opacity-75;
   }
   .card {
-    @apply mr-5 flex flex-col justify-center items-start;
+    @apply mr-5 flex flex-col items-start justify-center;
   }
   .subtitle {
     @apply font-anek text-xl font-medium leading-6 text-purple-800;
@@ -95,12 +95,15 @@
     @apply text-sm text-slate-600;
   }
   .card {
-    @apply flex flex-col justify-center items-center;
+    @apply flex flex-col items-center justify-center;
   }
-  .anchorlist{
+  .anchorlist {
     @apply text-slate-100 hover:cursor-pointer hover:underline;
   }
 
+  .section-hidden {
+    @apply opacity-0 translate-y-32;
+  }
 }
 
 ul > a:hover {
@@ -129,15 +132,15 @@ ul > a:hover {
 }
 
 #gradient-canvas {
-  --gradient-color-1: #FCCF31;
+  --gradient-color-1: #fccf31;
   --gradient-color-2: #f06161;
   --gradient-color-3: #6060d6;
-  --gradient-color-4: #FF00CC;
-};
+  --gradient-color-4: #ff00cc;
+}
 
 #sidegradient-canvas {
   --gradient2-color-1: #aaf530;
   --gradient2-color-2: #30b3f9;
   --gradient2-color-3: #e66920;
   --gradient2-color-4: #660d63;
-};
+}

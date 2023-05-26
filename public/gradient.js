@@ -869,5 +869,3 @@ class Gradient {
  */
 var gradient = new Gradient();
 gradient.initGradient("#gradient-canvas");
-var sidegradient = new Gradient();
-sidegradient.initGradient("#sidegradient-canvas");

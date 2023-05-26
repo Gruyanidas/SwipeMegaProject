@@ -21,38 +21,44 @@
     class="relative flex min-h-screen flex-col items-center justify-start xs:mx-4 3xl:mt-0"
   >
     <!-- HEADER SECTION VAZNO -->
-    <nav
-      class="navbar mb-5 flex w-full max-w-6xl items-center justify-between p-4 xs:mb-2 xs:h-[100px] xs:w-full xs:scale-90 xs:justify-between md:h-[100px] md:p-6 3xl:mb-0 3xl:h-[150px] 3xl:items-start 3xl:justify-between 3xl:px-0 3xl:pt-8"
-    >
-      <div>
-        <img
-          class="-translate-x-24 xs:translate-x-0 md:translate-x-0 3xl:translate-x-0"
-          id="home"
-          src="assets/logo-dark.svg"
-        />
-      </div>
-      <ul id="nav-bar" class="list-none xs:collapse md:scale-90 3xl:scale-100">
-        <a id="anchor-products" class="anchor m-2" href="#products">Products</a>
-        <a class="anchor m-2" href="#developers">Developers</a>
-        <a class="anchor m-2" href="#resources">Resources</a>
-        <a class="anchor m-2" href="#pricing">Pricing</a>
-        <a class="anchor m-2" href="#solutions">Solutions</a>
-        <a class="anchor m-2" href="#operations">Operations</a>
-      </ul>
-      <div id="signupbtn">
-        <button
-          class="pbutton signupbtn opacity-25 hover:bg-slate-800 hover:opacity-50"
-        >
-          Sign up
-        </button>
-      </div>
-      <div
-        id="burger"
-        class="hover:cursor-pointer hover:opacity-70 xs:h-[30px] xs:w-[30px] md:collapse 3xl:collapse"
+    <!-- Navbar is wraped because of sticky positioning -->
+    <div class="wraper relative">
+      <nav
+        class="navbar mb-5 flex w-full max-w-6xl items-center justify-between p-4 xs:mb-2 xs:h-[100px] xs:w-full xs:scale-90 xs:justify-between md:h-[100px] md:p-6 3xl:mb-0 3xl:h-[150px] 3xl:max-w-6xl 3xl:items-start 3xl:justify-between 3xl:px-0 3xl:pt-8"
       >
-        <img src="assets/burger-menu.png" />
-      </div>
-    </nav>
+        <div>
+          <img
+            class="img -translate-y-2 transition-opacity duration-200 xs:translate-x-0 md:translate-x-0 3xl:translate-x-0"
+            id="home"
+            src="assets/logo-dark.svg"
+          />
+        </div>
+        <ul
+          id="nav-bar"
+          class="list-none transition-all duration-200 xs:collapse md:scale-90 3xl:scale-100"
+        >
+          <a class="anchor m-2" href="#products">Products</a>
+          <a class="anchor m-2" href="#developers">Developers</a>
+          <a class="anchor m-2" href="#resources">Resources</a>
+          <a class="anchor m-2" href="#pricing">Pricing</a>
+          <a class="anchor m-2" href="#solutions">Solutions</a>
+          <a class="anchor m-2" href="#operations">Operations</a>
+        </ul>
+        <div id="signupbtn">
+          <button
+            class="pbutton signupbtn opacity-50 transition-opacity duration-200 hover:bg-slate-800 hover:opacity-75"
+          >
+            Sign up
+          </button>
+        </div>
+        <div
+          id="burger"
+          class="hover:cursor-pointer hover:opacity-70 xs:h-[30px] xs:w-[30px] md:collapse 3xl:collapse"
+        >
+          <img src="assets/burger-menu.png" />
+        </div>
+      </nav>
+    </div>
     <main
       class="relative mt-10 flex w-full max-w-6xl flex-col items-center xs:mt-0"
     >
@@ -189,12 +195,12 @@
         </form>
       </section>
       <!-- PAYMENTS SECTION VAZNO -->
-      <div class="my-10 xs:my-4 md:mx-8 md:mt-0 3xl:mt-0">
+      <div class="payments my-10 xs:my-4 md:mx-8 md:mt-0 3xl:mt-0">
         <div class="two-col relative xs:justify-start">
           <!-- MODAL WINDOW VAZNO -->
           <div
             id="modal"
-            class="prose-zink prose absolute z-50 hidden rounded-md border-2 border-slate-800 bg-slate-100 bg-gradient-to-tl from-[#12C2E9] to-[#F64F59] p-6 text-center text-lg font-semibold shadow-[10px_10px_16px_3px_rgba(0,0,0,0.83)] xs:h-1/2 xs:w-full md:h-1/2 md:w-1/2 3xl:h-full 3xl:w-[500px] 3xl:rounded-3xl"
+            class="prose-zink prose absolute z-50 hidden rounded-md border-2 border-slate-800 bg-slate-100 bg-gradient-to-tl from-[#12C2E9] to-[#F64F59] p-6 text-center text-lg font-semibold shadow-[10px_10px_16px_3px_rgba(0,0,0,0.83)] xs:h-1/2 xs:w-full md:h-1/2 md:w-1/2 3xl:h-4/5 3xl:w-[500px] 3xl:rounded-3xl"
           >
             <div
               id="modalbtncls"
@@ -213,7 +219,7 @@
           </div>
 
           <div class="col-left xs:flex xs:w-full xs:flex-col">
-            <h1 class="h1 prose prose-stone xs:text-5xl">
+            <h1 class="h1 paymentheader prose prose-stone xs:text-5xl">
               Payments infrastructure for the world
             </h1>
             <p class="par max-w-lg 3xl:text-3xl">
@@ -236,7 +242,7 @@
           </div>
           <div class="col-right xs:collapse md:translate-y-72 md:scale-90">
             <img
-              class="-translate-y-52 translate-x-5 scale-75"
+              class="mobphone -translate-y-52 translate-x-5 scale-75"
               src="assets/hero-phone.png"
               alt="phone"
             />
@@ -244,7 +250,9 @@
         </div>
       </div>
       <!-- PARTNERS VAZNO -->
-      <div class="partners-section">
+      <div
+        class="partners-section section relative -z-50 transition-all duration-700"
+      >
         <div
           class="section-container mt-10 max-w-6xl xs:mt-12 3xl:mt-4 3xl:-translate-y-20"
         >
@@ -264,7 +272,7 @@
       </div>
       <!-- UNIFIED PLATFORM VAZNO -->
       <section
-        class="unified-platform 3xl:mt-22 mb-8 mt-16 max-h-screen w-full max-w-6xl xs:mb-4 xs:mt-12"
+        class="section unified-platform 3xl:mt-22 mb-8 mt-16 max-h-screen w-full max-w-6xl transition-all duration-700 xs:mb-4 xs:mt-12"
         id="resources"
       >
         <div class="w-1/2 xs:w-full md:mx-8">
@@ -305,7 +313,7 @@
         </button>
       </section>
       <section
-        class="graphic-section mb-20 mt-20 w-full max-w-6xl xs:collapse md:scale-90"
+        class="section graphic-section mb-20 mt-20 w-full max-w-6xl transition-all duration-700 xs:collapse md:scale-90"
       >
         <div class="grid-container grid gap-12">
           <img src="assets/credit-card.png" id="credit-card" />
@@ -317,7 +325,7 @@
       <!-- DESIGN FOR ENG VAZNO -->
       <section
         id="solutions"
-        class="mt-34 relative mb-36 flex w-full max-w-6xl flex-col from-[#0b2238] to-[#6465d9] before:absolute before:-left-[400px] before:top-0 before:-z-10 before:h-[900px] before:w-[2000px] before:-skew-y-6 before:bg-gradient-to-tr xs:mb-8 xs:mt-16"
+        class="section mt-34 relative mb-36 flex w-full max-w-6xl flex-col from-[#0b2238] to-[#6465d9] transition-all duration-700 before:absolute before:-left-[400px] before:top-0 before:-z-10 before:h-[900px] before:w-[2000px] before:-skew-y-6 before:bg-gradient-to-tr xs:mb-8 xs:mt-16"
       >
         <div class="two-col xs:max-h-screen">
           <div class="col-left 3xl:max-w-1/2 xs:w-full md:mx-8">
@@ -411,7 +419,7 @@
       <!-- OPERATIONS SECTION -->
       <section
         id="operations"
-        class="mb-16 flex w-full max-w-6xl flex-col gap-4 xs:m-8 md:mt-0 md:flex 3xl:mt-10"
+        class="section mb-16 flex w-full max-w-6xl flex-col gap-4 transition-all duration-700 xs:m-8 md:mt-0 md:flex 3xl:mt-10"
       >
         <div class="xs:text-left md:mx-8">
           <p
@@ -426,7 +434,7 @@
           </h2>
         </div>
         <div
-          class="btncontainer bottom-0 z-20 flex min-h-fit w-full items-baseline justify-around xs:w-full xs:flex-col xs:gap-y-4 md:mx-8 md:gap-x-5"
+          class="btncontainer bottom-0 z-20 flex min-h-fit w-full items-baseline justify-around xs:w-full xs:flex-col xs:gap-y-4 md:mx-8 md:gap-x-3"
         >
           <button
             data-tab="1"
@@ -488,7 +496,7 @@
                 Convenient, and Hassle-Free!
               </h3>
               <p
-                class="parsmall prose prose-stone mb-5 text-lg 3xl:text-2xl md:prose md:prose-stone md:text-left md:text-xl md:font-bold"
+                class="parsmall prose prose-stone mb-5 text-lg md:prose md:prose-stone md:text-left md:text-xl md:font-bold 3xl:text-2xl"
               >
                 "We offer flexible loan amounts and terms tailored to meet your
                 specific needs. Whether you require a small amount for a
@@ -513,7 +521,7 @@
                 Easy and Efficient!
               </h3>
               <p
-                class="parsmall prose prose-stone mb-5 text-lg 3xl:text-2xl md:prose md:prose-stone md:text-left md:text-xl md:font-bold"
+                class="parsmall prose prose-stone mb-5 text-lg md:prose md:prose-stone md:text-left md:text-xl md:font-bold 3xl:text-2xl"
               >
                 "With our instant account closing service, you no longer need to
                 endure tedious paperwork or lengthy waiting periods. We
@@ -529,7 +537,7 @@
 
       <!-- WHY SWIPE SECTION VAZNO -->
       <section
-        class="mb-16 mt-52 w-full max-w-6xl xs:mb-8 xs:mt-72 md:mt-0 3xl:mt-10"
+        class="section mb-16 mt-52 w-full max-w-6xl transition-all duration-700 xs:mb-8 xs:mt-72 md:mt-0 3xl:mt-10"
       >
         <div class="flex flex-col md:mx-8 3xl:flex-row">
           <div>
@@ -609,7 +617,7 @@
         </div>
       </section>
       <!-- GLOBAL SCALE VAZNO -->
-      <section id="developers">
+      <section id="developers" class="section transition-all duration-700">
         <div class="mt-34 relative mb-16 flex w-full max-w-6xl flex-col">
           <img
             class="absolute -top-36 left-40 -z-10 scale-[0.65] opacity-70 xs:left-10 xs:top-0 xs:scale-90 xs:opacity-40 md:left-20 md:top-40 md:opacity-50 3xl:scale-110 3xl:opacity-30"
@@ -682,7 +690,10 @@
         </div>
       </section>
       <!-- VIRTUAL EVENTS VAZNO -->
-      <section id="products" class="mb-16 mt-32 xs:mb-8 xs:mt-10 md:mt-16">
+      <section
+        id="products"
+        class="section mb-16 mt-32 transition-all duration-700 xs:mb-8 xs:mt-10 md:mt-16"
+      >
         <div class="two-col xs:flex-col md:flex-col">
           <div class="col-left xs:w-full md:w-full">
             <div>
@@ -734,7 +745,10 @@
         </div>
       </section>
       <!-- WHAT ARE YOU WAITING FOR VAZNO -->
-      <section id="pricing" class="mb-16 mt-32 xs:mb-8 xs:mt-10 md:mt-10">
+      <section
+        id="pricing"
+        class="section mb-16 mt-32 transition-all duration-700 xs:mb-8 xs:mt-10 md:mt-10"
+      >
         <div class="two-col xs:flex-col xs:items-center xs:justify-center">
           <div
             class="col-left xs:mx-8 xs:w-full xs:pr-0 md:ml-8 md:mr-2 md:w-full"
@@ -805,7 +819,7 @@
         </div>
       </section>
       <footer
-        class="relative mt-16 w-full max-w-6xl from-slate-100 to-slate-400 pb-8 pt-16 before:absolute before:bottom-[50px] before:left-[-600px] before:top-[15px] before:-z-10 before:h-[300px] before:w-[2500px] before:-skew-y-3 before:bg-gradient-to-tr xs:mt-4 md:mt-4"
+        class="section relative mt-16 w-full max-w-6xl from-slate-100 to-slate-400 pb-8 pt-16 transition-all duration-700 before:absolute before:bottom-[50px] before:left-[-600px] before:top-[15px] before:-z-10 before:h-[300px] before:w-[2500px] before:-skew-y-3 before:bg-gradient-to-tr xs:mt-4 md:mt-4"
       >
         <div
           class="flex items-start justify-center xs:flex xs:flex-wrap xs:items-start xs:justify-start"

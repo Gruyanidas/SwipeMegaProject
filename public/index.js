@@ -169,3 +169,111 @@ tabContainer.addEventListener("click", function (e) {
     .querySelector(`.content-cont--${target.dataset.tab}`)
     .classList.add("flex");
 });
+
+//FADING MENU
+const navbar = document.getElementById("nav-bar");
+navbar.addEventListener("mouseover", function (event) {
+  // const target = event.target.closest('.') closest se ovde ne koristi jer nema child elemenata
+  event.preventDefault();
+  if (event.target.classList.contains("anchor")) {
+    const link = event.target;
+    const links = document.querySelectorAll(".anchor");
+    const logo = navbar.closest(".navbar").querySelector(".img");
+    const btn = navbar.closest(".navbar").querySelector(".signupbtn");
+
+    links.forEach((el) => {
+      if (el !== link) {
+        el.classList.add("opacity-50");
+      }
+    });
+    logo.classList.add("opacity-50");
+    btn.classList.remove("opacity-50");
+    btn.classList.add("opacity-10");
+  }
+});
+
+//Mouse out sluzi da UNDO sve prethodno
+navbar.addEventListener("mouseout", function (event) {
+  event.preventDefault();
+  if (event.target.classList.contains("anchor")) {
+    const link = event.target;
+    const links = document.querySelectorAll(".anchor");
+    const logo = navbar.closest(".navbar").querySelector(".img");
+    const btn = navbar.closest(".navbar").querySelector(".signupbtn");
+
+    links.forEach((el) => {
+      if (el !== link) {
+        el.classList.remove("opacity-50");
+      }
+    });
+    logo.classList.remove("opacity-50");
+    btn.classList.remove("opacity-10");
+    btn.classList.add("opacity-50");
+  }
+});
+
+//STICKY NAV BAR VAZNO Pogubno za performance
+// const partners = document.querySelector(".partners-section");
+// const cords = partners.getBoundingClientRect();
+// // console.log(cords); dobija se pocetna vrednost sekcije top=384
+// const header = document.querySelector(".navbar")
+
+// window.addEventListener('scroll', function(event){
+//   // console.log(window.scrollY); ne moze hard code
+//   if(window.scrollY > cords.top) { header.classList.add("fixed", "top-0", "max-w-6xl", "z-[200]");
+// }
+//   if(window.scrollY < cords.top)
+//   (header.classList.remove("fixed", "top-0", "max-w-6xl", "z-[200]"))
+//   }
+// )
+// const obsOptions = {
+//   root:null,
+//   treshold:0.1
+// };
+
+// const partners = document.querySelector(".partners-section");
+const header = document.querySelector(".navbar");
+const payments = document.querySelector(".payments");
+const navheight = header.getBoundingClientRect();
+
+//VAZNO INTERSECTION OBSERVER VAZNO OVO SE KORISTI
+// ...ne radi iz nepoznatog razloga :D
+const obsCallback = function (entries) {
+  // entries.forEach(entry=>
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    header.classList.add("fixed", "top-0", "z-[200]");
+  } else {
+    header.classList.remove("fixed", "top-0", "z-[200]");
+  }
+};
+
+//VAZNO entries je array of tresholds
+
+const obsOptions = {
+  root: null,
+  threshold: [0.2],
+  rootmargin: `-${navheight.height}px`,
+};
+const paymentsObserver = new IntersectionObserver(obsCallback, obsOptions);
+paymentsObserver.observe(payments);
+
+//NASLOV Revealing section
+
+const allSections = document.querySelectorAll(".section");
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  // console.log(entries);
+  if(!entry.isIntersecting) return;
+  entry.target.classList.remove("section-hidden");
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {root:null,
+treshold:0.4})
+
+allSections.forEach(function(section) {
+  sectionObserver.observe(section)
+  section.classList.add("section-hidden") 
+})

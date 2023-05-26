@@ -945,8 +945,8 @@ video {
 }
 .overlay {
   position: absolute;
-  top: 0px;
   left: 0px;
+  top: 0px;
   z-index: 10;
   height: 100%;
   width: 100%;
@@ -1137,6 +1137,11 @@ video {
   cursor: pointer;
   text-decoration-line: underline;
 }
+.section-hidden {
+  --tw-translate-y: 8rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  opacity: 0;
+}
 .collapse {
   visibility: collapse;
 }
@@ -1145,6 +1150,9 @@ video {
 }
 .relative {
   position: relative;
+}
+.sticky {
+  position: sticky;
 }
 .-bottom-16 {
   bottom: -4rem;
@@ -1184,6 +1192,9 @@ video {
 }
 .-z-10 {
   z-index: -10;
+}
+.-z-50 {
+  z-index: -50;
 }
 .z-0 {
   z-index: 0;
@@ -1376,6 +1387,10 @@ video {
 }
 .-translate-x-24 {
   --tw-translate-x: -6rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-y-2 {
+  --tw-translate-y: -0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .-translate-y-52 {
@@ -1804,6 +1819,9 @@ video {
 .opacity-25 {
   opacity: 0.25;
 }
+.opacity-50 {
+  opacity: 0.5;
+}
 .opacity-70 {
   opacity: 0.7;
 }
@@ -1843,11 +1861,17 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+.duration-200 {
+  transition-duration: 200ms;
+}
 .duration-300 {
   transition-duration: 300ms;
 }
 .duration-500 {
   transition-duration: 500ms;
+}
+.duration-700 {
+  transition-duration: 700ms;
 }
 
 .with-icon {
@@ -1891,18 +1915,18 @@ ul > a:hover {
 }
 
 #gradient-canvas {
-  --gradient-color-1: #FCCF31;
+  --gradient-color-1: #fccf31;
   --gradient-color-2: #f06161;
   --gradient-color-3: #6060d6;
-  --gradient-color-4: #FF00CC;
-};
+  --gradient-color-4: #ff00cc;
+}
 
 #sidegradient-canvas {
   --gradient2-color-1: #aaf530;
   --gradient2-color-2: #30b3f9;
   --gradient2-color-3: #e66920;
   --gradient2-color-4: #660d63;
-};
+}
 
 @media (min-width: 325px) and (max-width: 400px) {
 
@@ -2543,6 +2567,10 @@ ul > a:hover {
   opacity: 0.7;
 }
 
+.hover\:opacity-75:hover {
+  opacity: 0.75;
+}
+
 @media (min-width: 325px) and (max-width: 400px) {
 
   .xs\:collapse {
@@ -2564,11 +2592,6 @@ ul > a:hover {
   .xs\:mx-4 {
     margin-left: 1rem;
     margin-right: 1rem;
-  }
-
-  .xs\:mx-5 {
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
   }
 
   .xs\:mx-8 {
@@ -2775,23 +2798,14 @@ ul > a:hover {
     text-align: start;
   }
 
-  .xs\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .xs\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
   .xs\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 
-  .xs\:font-semibold {
-    font-weight: 600;
+  .xs\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .xs\:font-bold {
@@ -2846,9 +2860,9 @@ ul > a:hover {
     margin-bottom: 0.5rem;
   }
 
-  .md\:mx-14 {
-    margin-left: 3.5rem;
-    margin-right: 3.5rem;
+  .md\:mx-10 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
   }
 
   .md\:mb-4 {
@@ -2891,20 +2905,12 @@ ul > a:hover {
     display: flex;
   }
 
-  .md\:h-1\/4 {
-    height: 25%;
+  .md\:h-1\/2 {
+    height: 50%;
   }
 
   .md\:h-\[100px\] {
     height: 100px;
-  }
-
-  .md\:h-full {
-    height: 100%;
-  }
-
-  .md\:h-1\/2 {
-    height: 50%;
   }
 
   .md\:w-1\/2 {
@@ -2948,6 +2954,11 @@ ul > a:hover {
   .md\:gap-x-5 {
     -moz-column-gap: 1.25rem;
          column-gap: 1.25rem;
+  }
+
+  .md\:gap-x-3 {
+    -moz-column-gap: 0.75rem;
+         column-gap: 0.75rem;
   }
 
   .md\:p-6 {
@@ -3030,6 +3041,10 @@ ul > a:hover {
     display: flex;
   }
 
+  .\33xl\:h-4\/5 {
+    height: 80%;
+  }
+
   .\33xl\:h-\[150px\] {
     height: 150px;
   }
@@ -3038,16 +3053,16 @@ ul > a:hover {
     height: 50px;
   }
 
-  .\33xl\:h-full {
-    height: 100%;
-  }
-
   .\33xl\:w-\[500px\] {
     width: 500px;
   }
 
   .\33xl\:w-\[50px\] {
     width: 50px;
+  }
+
+  .\33xl\:max-w-6xl {
+    max-width: 72rem;
   }
 
   .\33xl\:-translate-y-10 {
