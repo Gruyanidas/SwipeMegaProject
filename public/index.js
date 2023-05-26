@@ -25,10 +25,10 @@ const signinbtn = document.getElementById("signinbtn");
 //VAZNO Smooth scroll
 
 //VAZNO Ovo je bolja opcija jer se eventlistener kaci na parent element a ne na svaki child element
-barlist.addEventListener("click", function (el) {
-  el.preventDefault();
-  if (el.target.classList.contains("anchor")) {
-    const id = el.target.getAttribute("href");
+barlist.addEventListener("click", function (event) {
+  event.preventDefault();
+  if (event.target.classList.contains("anchor")) {
+    const id = event.target.getAttribute("href");
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   }
 });
@@ -115,13 +115,15 @@ const centering = function () {
   modal.style.left = leftPosition + "px";
 };
 
-buttons.forEach((e) => {
-  e.addEventListener("click", function (e) {
-    e.preventDefault();
-    if (!e.target.className.includes("signupbtn") &&
-        !e.target.className.includes("transfers") &&
-        !e.target.className.includes("loans") &&
-        !e.target.className.includes("closing")){
+buttons.forEach((button) => {
+  button.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (
+      !event.target.className.includes("signupbtn") &&
+      !event.target.className.includes("transfers") &&
+      !event.target.className.includes("loans") &&
+      !event.target.className.includes("closing")
+    ) {
       openModal();
       centering();
     }
@@ -130,39 +132,40 @@ buttons.forEach((e) => {
 
 //VAZNO Operations section
 
-const tabs = document.querySelectorAll('.operation_tab');
-const tabContainer = document.querySelector('.btncontainer');
-const tabsContent = document.querySelectorAll('.content-cont');
-let activeTab = null;
+const tabs = document.querySelectorAll(".operation_tab");
+const tabContainer = document.querySelector(".btncontainer");
+const tabsContent = document.querySelectorAll(".content-cont");
+// let activeTab = null; //CHAT GPT IDEA
 
-
-tabContainer.addEventListener('click', function(e){
- //VAZNO tabs
+tabContainer.addEventListener("click", function (e) {
+  //VAZNO tabs
   const target = e.target.closest(".operation_tab");
-  console.log(target);
-  if(!target) return;
-  tabs.forEach(t=>t.classList.remove("-translate-y-2"));
+  if (!target) return;
+  tabs.forEach((t) => t.classList.remove("-translate-y-2"));
   target.classList.add("-translate-y-2");
 
-  // Chat GPT code:
-  if (activeTab) {
-    activeTab.classList.remove("flex");
-    activeTab.classList.add("hidden");
-  }
+  // // Chat GPT code:
+  // if (activeTab) {
+  //   activeTab.classList.remove("flex");
+  //   activeTab.classList.add("hidden");
+  // }
 
-  const contentToShow = document.querySelector(`.content-cont--${target.dataset.tab}`);
-  contentToShow.classList.remove("hidden");
-  contentToShow.classList.add("flex");
-  activeTab = contentToShow; 
+  // const contentToShow = document.querySelector(
+  //   `.content-cont--${target.dataset.tab}`
+  // );
+  // contentToShow.classList.remove("hidden");
+  // contentToShow.classList.add("flex");
+  // activeTab = contentToShow;
 
+  //Uklanjanje aktivne klase pre dodeljivanja
+  tabsContent.forEach((e) => e.classList.remove("flex"));
+  tabsContent.forEach((e) => e.classList.add("hidden"));
 
-  // //Uklanjanje aktivne klase pre dodeljivanja
-  // tabsContent.forEach(e=>e.classList.remove("flex"));
-  // tabsContent.forEach(e=>e.classList.add("hidden"));
-
-  // //content area
-  // document.querySelector(`.content-cont--${target.dataset.tab}`).classList.remove("hidden");
-  // document.querySelector(`.content-cont--${target.dataset.tab}`).classList.add("flex");
-
-})
-
+  //content area
+  document
+    .querySelector(`.content-cont--${target.dataset.tab}`)
+    .classList.remove("hidden");
+  document
+    .querySelector(`.content-cont--${target.dataset.tab}`)
+    .classList.add("flex");
+});
