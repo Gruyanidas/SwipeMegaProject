@@ -231,22 +231,22 @@ navbar.addEventListener("mouseout", function (event) {
 //   treshold:0.1
 // };
 
-// const partners = document.querySelector(".partners-section");
-const header = document.querySelector(".navbar");
-const payments = document.querySelector(".payments");
-const navheight = header.getBoundingClientRect();
+// // const partners = document.querySelector(".partners-section");
+// const header = document.querySelector(".navbar");
+// const payments = document.querySelector(".payments");
+// const navheight = header.getBoundingClientRect();
 
-//VAZNO INTERSECTION OBSERVER VAZNO OVO SE KORISTI
-// ...ne radi iz nepoznatog razloga :D
-const obsCallback = function (entries) {
-  // entries.forEach(entry=>
-  const [entry] = entries;
-  if (!entry.isIntersecting) {
-    header.classList.add("fixed", "top-0", "z-[200]");
-  } else {
-    header.classList.remove("fixed", "top-0", "z-[200]");
-  }
-};
+// //VAZNO INTERSECTION OBSERVER VAZNO OVO SE KORISTI
+// // ...ne radi iz nepoznatog razloga :D
+// const obsCallback = function (entries) {
+//   // entries.forEach(entry=>
+//   const [entry] = entries;
+//   if (!entry.isIntersecting) {
+//     header.classList.add("fixed", "top-0", "z-[200]");
+//   } else {
+//     header.classList.remove("fixed", "top-0", "z-[200]");
+//   }
+// };
 
 //VAZNO entries je array of tresholds
 
@@ -258,7 +258,7 @@ const obsOptions = {
 const paymentsObserver = new IntersectionObserver(obsCallback, obsOptions);
 paymentsObserver.observe(payments);
 
-//NASLOV Revealing section
+//NASLOV Revealing section - sklanjanje section-hidden clase sa svih sekcija
 
 const allSections = document.querySelectorAll(".section");
 
@@ -271,9 +271,10 @@ const revealSection = function (entries, observer) {
 };
 
 const sectionObserver = new IntersectionObserver(revealSection, {root:null,
-treshold:0.4})
+treshold:0.5})
 
 allSections.forEach(function(section) {
   sectionObserver.observe(section)
   section.classList.add("section-hidden") 
 })
+
