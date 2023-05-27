@@ -3,11 +3,6 @@
 const burger = document.getElementById("burger");
 const drawer = document.getElementById("drawer");
 const closebtndrawer = document.getElementById("drawer-closer");
-const solutions = document.querySelector("#solutions");
-const pricing = document.querySelector("#pricing");
-const resources = document.querySelector("#resources");
-const developers = document.querySelector("#developers");
-const products = document.querySelector("#products");
 const barlist = document.getElementById("nav-bar");
 const allLinks = [...document.getElementsByClassName("anchor")];
 const modalcloser = document.getElementById("modalbtncls");
@@ -230,16 +225,13 @@ navbar.addEventListener("mouseout", function (event) {
 //   root:null,
 //   treshold:0.1
 // };
-
-// // const partners = document.querySelector(".partners-section");
+// VAZNO NE RADI VAZNO
 // const header = document.querySelector(".navbar");
-// const payments = document.querySelector(".payments");
-// const navheight = header.getBoundingClientRect();
+// const unifiedplatform = document.querySelector(".unified-platform");
+// // const navheight = header.getBoundingClientRect();
 
 // //VAZNO INTERSECTION OBSERVER VAZNO OVO SE KORISTI
-// // ...ne radi iz nepoznatog razloga :D
 // const obsCallback = function (entries) {
-//   // entries.forEach(entry=>
 //   const [entry] = entries;
 //   if (!entry.isIntersecting) {
 //     header.classList.add("fixed", "top-0", "z-[200]");
@@ -248,33 +240,125 @@ navbar.addEventListener("mouseout", function (event) {
 //   }
 // };
 
-//VAZNO entries je array of tresholds
+// //VAZNO entries je array of tresholds
 
-const obsOptions = {
-  root: null,
-  threshold: [0.2],
-  rootmargin: `-${navheight.height}px`,
-};
-const paymentsObserver = new IntersectionObserver(obsCallback, obsOptions);
-paymentsObserver.observe(payments);
+// const obsOptions = {
+//   root: null,
+//   threshold: [0.5],
+//   // rootmargin: `-${navheight.height}px`,
+// };
+// const observer = new IntersectionObserver(obsCallback, obsOptions);
+// observer.observe(unifiedplatform);
 
-//NASLOV Revealing section - sklanjanje section-hidden clase sa svih sekcija
+// NASLOV Revealing section - sklanjanje section-hidden clase sa svih sekcija
 
 const allSections = document.querySelectorAll(".section");
 
+allSections.forEach(function (section) {
+  section.classList.add("translate-y-32");
+});
+
 const revealSection = function (entries, observer) {
   const [entry] = entries;
-  // console.log(entries);
-  if(!entry.isIntersecting) return;
-  entry.target.classList.remove("section-hidden");
+  console.log(entry);
+  if (entry.isIntersecting)
+  entry.target.classList.remove("translate-y-32");
   observer.unobserve(entry.target);
 };
 
-const sectionObserver = new IntersectionObserver(revealSection, {root:null,
-treshold:0.5})
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  treshold: [0.1],
+});
 
-allSections.forEach(function(section) {
-  sectionObserver.observe(section)
-  section.classList.add("section-hidden") 
-})
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+});
 
+//NASLOV Blury images - grid section
+
+const gridimgs = document.querySelector(".graphic-section");
+const partners = document.querySelector(".partners-section");
+
+const revealer = function (entries) {
+  const [entry] = entries;
+  if (entry.isIntersecting) {
+    gridimgs.classList.add("blur-md");
+  } else {
+    gridimgs.classList.remove("blur-md");
+  }
+};
+
+const options = {
+  root: null,
+  treshold: [0.2],
+};
+
+const imgObserver = new IntersectionObserver(revealer, options);
+imgObserver.observe(partners);
+
+//NASLOV Blury images - terminals
+
+const terminals = document.querySelector(".terminals");
+const monobank = document.querySelector(".monobank");
+
+const trevealer = function (entries) {
+  const [entry] = entries;
+  if (entry.isIntersecting) {
+    terminals.classList.add("blur-md");
+  } else {
+    terminals.classList.remove("blur-md");
+  }
+};
+
+const toptions = {
+  root: null,
+  treshold: [0.5],
+};
+
+const terminalObs = new IntersectionObserver(trevealer, toptions);
+terminalObs.observe(monobank);
+
+//NASLOV Blury images - globalscale
+
+const globalscale = document.getElementById("developers");
+const swipe = document.querySelector(".swipe");
+
+const devRevealer = function (entries) {
+  const [entry] = entries;
+  if (entry.isIntersecting) {
+    globalscale.classList.add("blur-md");
+  } else {
+    globalscale.classList.remove("blur-md");
+  }
+};
+
+const devOpt = {
+  root: null,
+  treshold: [0],
+};
+
+const devObserver = new IntersectionObserver(devRevealer, devOpt);
+devObserver.observe(swipe);
+
+//NASLOV Blury images - virtual events section
+
+const virtualev = document.querySelector(".virtual");
+const lastpar = document.querySelector(".last-par");
+
+const virtRevealer = function (entries) {
+  const [entry] = entries;
+  if (entry.isIntersecting) {
+    virtualev.classList.add("blur-md");
+  } else {
+    virtualev.classList.remove("blur-md");
+  }
+};
+
+const virtOpt = {
+  root: null,
+  treshold: [0],
+};
+
+const virtObserver = new IntersectionObserver(virtRevealer, virtOpt);
+virtObserver.observe(lastpar);

@@ -200,7 +200,7 @@
           <!-- MODAL WINDOW VAZNO -->
           <div
             id="modal"
-            class="prose-zink prose absolute z-50 hidden rounded-md border-2 border-slate-800 bg-slate-100 bg-gradient-to-tl from-[#12C2E9] to-[#F64F59] p-6 text-center text-lg font-semibold shadow-[10px_10px_16px_3px_rgba(0,0,0,0.83)] xs:h-1/2 xs:w-full md:h-1/2 md:w-1/2 3xl:h-4/5 3xl:w-[500px] 3xl:rounded-3xl"
+            class="prose-zink prose absolute z-50 hidden rounded-md border-2 border-slate-800 bg-slate-100 bg-gradient-to-tl from-[#12C2E9] to-[#F64F59] p-6 text-center text-lg font-semibold shadow-[10px_10px_16px_3px_rgba(0,0,0,0.83)] xs:h-1/2 xs:w-full md:h-1/2 md:w-1/2 3xl:h-2/5 3xl:w-[500px] 3xl:rounded-3xl"
           >
             <div
               id="modalbtncls"
@@ -312,13 +312,14 @@
           Start now<img src="assets/arrow-right-light.svg" />
         </button>
       </section>
+      <!-- GRID SECTION -->
       <section
-        class="graphic-section mb-20 mt-20 w-full max-w-6xl xs:collapse md:scale-90"
+        class="graphic-section mb-20 mt-20 w-full max-w-6xl xs:collapse md:scale-90 transition-all duration-1000"
       >
         <div
-          class="section grid-container grid gap-12 transition-all duration-700"
+          class="section grid-container grid gap-12"
         >
-          <img src="assets/credit-card.png" id="credit-card" />
+          <img class="monobank" src="assets/credit-card.png" id="credit-card" />
           <img src="assets/slack-invoice.png" id="invoice" />
           <img src="assets/phone.png" id="phone" />
           <img src="assets/dash.png" id="dash" />
@@ -391,7 +392,7 @@
               </div>
             </div>
           </div>
-          <div class="col-right xs:collapse">
+          <div class="terminals transition-all duration-1000 col-right xs:collapse">
             <img
               class="mb-5 scale-90 rounded-3xl"
               src="assets/terminal-code.png"
@@ -544,7 +545,7 @@
         <div class="flex flex-col md:mx-8 3xl:flex-row">
           <div>
             <p
-              class="subtitle mb-4 mt-6 text-[#7f45af] xs:mb-0 xs:text-center md:my-0 3xl:text-3xl"
+              class="subtitle swipe mb-4 mt-6 text-[#7f45af] xs:mb-0 xs:text-center md:my-0 3xl:text-3xl"
             >
               Why Swipe
             </p>
@@ -608,7 +609,7 @@
                 Crazy Optimized
               </h4>
               <p
-                class="parsmall mb-5 text-lg xs:text-center md:text-center 3xl:text-center 3xl:text-3xl"
+                class="parsmall last-par mb-5 text-lg xs:text-center md:text-center 3xl:text-center 3xl:text-3xl"
               >
                 We use machine learning trained on billions of data points to
                 help optimize all products, from fraud to revenue recovery and
@@ -619,7 +620,7 @@
         </div>
       </section>
       <!-- GLOBAL SCALE VAZNO -->
-      <section id="developers" class="section transition-all duration-700">
+      <section id="developers" class="section transition-all duration-[2000ms]">
         <div class="mt-34 relative mb-16 flex w-full max-w-6xl flex-col">
           <img
             class="absolute -top-36 left-40 -z-10 scale-[0.65] opacity-70 xs:left-10 xs:top-0 xs:scale-90 xs:opacity-40 md:left-20 md:top-40 md:opacity-50 3xl:scale-110 3xl:opacity-30"
@@ -721,7 +722,7 @@
             </div>
           </div>
           <div
-            class="col-right relative z-30 overflow-hidden rounded-3xl border border-solid bg-gradient-to-tr from-purplish-600 to-bluish-600 pr-0 pt-10 shadow-2xl xs:w-full md:w-full"
+            class="col-right transition-all duration-1000 virtual relative z-30 overflow-hidden rounded-3xl border border-solid bg-gradient-to-tr from-purplish-600 to-bluish-600 pr-0 pt-10 shadow-2xl xs:w-full md:w-full"
           >
             <div class="flex items-center justify-center">
               <img class="scale-50" src="assets/swipe-sessions.png" />
