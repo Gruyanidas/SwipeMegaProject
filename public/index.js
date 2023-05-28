@@ -250,30 +250,30 @@ navbar.addEventListener("mouseout", function (event) {
 // const observer = new IntersectionObserver(obsCallback, obsOptions);
 // observer.observe(unifiedplatform);
 
-// NASLOV Revealing section - sklanjanje section-hidden clase sa svih sekcija
+// NASLOV Revealing section - otkrivanje svih sekcija
 
-const allSections = document.querySelectorAll(".section");
+// const allSections = document.querySelectorAll(".section");
 
-allSections.forEach(function (section) {
-  section.classList.add("translate-y-32");
-});
+// allSections.forEach(function (section) {
+//   section.classList.add("opacity-0", "duration-[3000ms]");
+// });
 
-const revealSection = function (entries, observer) {
-  const [entry] = entries;
-  console.log(entry);
-  if (entry.isIntersecting)
-  entry.target.classList.remove("translate-y-32");
-  observer.unobserve(entry.target);
-};
+// const revealSection = function (entries, observer) {
+//   const [entry] = entries;
+//   console.log(entry);
+//   if (entry.isIntersecting)
+//   entry.target.classList.remove("opacity-0");
+//   observer.unobserve(entry.target);
+// };
 
-const sectionObserver = new IntersectionObserver(revealSection, {
-  root: null,
-  treshold: [0.1],
-});
+// const sectionObserver = new IntersectionObserver(revealSection, {
+//   root: null,
+//   treshold: [0.5],
+// });
 
-allSections.forEach(function (section) {
-  sectionObserver.observe(section);
-});
+// allSections.forEach(function (section) {
+//   sectionObserver.observe(section);
+// });
 
 //NASLOV Blury images - grid section
 
@@ -283,7 +283,7 @@ const partners = document.querySelector(".partners-section");
 const revealer = function (entries) {
   const [entry] = entries;
   if (entry.isIntersecting) {
-    gridimgs.classList.add("blur-md");
+    gridimgs.classList.add("blur-md", "duration-1000");
   } else {
     gridimgs.classList.remove("blur-md");
   }
@@ -291,7 +291,7 @@ const revealer = function (entries) {
 
 const options = {
   root: null,
-  treshold: [0.2],
+  treshold: [0.4],
 };
 
 const imgObserver = new IntersectionObserver(revealer, options);
@@ -335,7 +335,7 @@ const devRevealer = function (entries) {
 
 const devOpt = {
   root: null,
-  treshold: [0],
+  treshold: [0.5],
 };
 
 const devObserver = new IntersectionObserver(devRevealer, devOpt);

@@ -100,10 +100,6 @@
   .anchorlist {
     @apply text-slate-100 hover:cursor-pointer hover:underline;
   }
-
-  .section-hidden {
-    @apply ;
-  }
 }
 
 ul > a:hover {
@@ -136,11 +132,4 @@ ul > a:hover {
   --gradient-color-2: #f06161;
   --gradient-color-3: #6060d6;
   --gradient-color-4: #ff00cc;
-}
-
-#sidegradient-canvas {
-  --gradient2-color-1: #aaf530;
-  --gradient2-color-2: #30b3f9;
-  --gradient2-color-3: #e66920;
-  --gradient2-color-4: #660d63;
 }
