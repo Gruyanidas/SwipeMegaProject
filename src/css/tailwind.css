@@ -14,6 +14,7 @@
   .pbutton {
     @apply rounded-3xl border-none bg-slate-800 px-5 py-2 font-roboto text-base font-semibold tracking-wider text-slate-300 duration-200 hover:bg-purplish-400;
   }
+
   .overlay {
     @apply absolute left-0 top-0 z-10 h-full w-full backdrop-blur-sm backdrop-brightness-90;
   }
@@ -104,6 +105,10 @@
 
 ul > a:hover {
   text-decoration: underline;
+}
+
+.headerspans {
+  @apply transition-all duration-300 inline-block whitespace-pre hover:-translate-y-2 hover:scale-125 hover:rotate-2 hover:cursor-default;
 }
 
 .grid-container {

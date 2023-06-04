@@ -1146,9 +1146,6 @@ video {
 .relative {
   position: relative;
 }
-.sticky {
-  position: sticky;
-}
 .-bottom-16 {
   bottom: -4rem;
 }
@@ -1511,6 +1508,9 @@ video {
 .overflow-hidden {
   overflow: hidden;
 }
+.whitespace-pre {
+  white-space: pre;
+}
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -1846,10 +1846,6 @@ video {
   --tw-shadow-colored: 19px 21px 17px -9px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.blur-md {
-  --tw-blur: blur(12px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1893,6 +1889,23 @@ video {
 
 ul > a:hover {
   text-decoration: underline;
+}
+
+.headerspans {
+  display: inline-block;
+  white-space: pre;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.headerspans:hover {
+  --tw-translate-y: -0.5rem;
+  --tw-rotate: 2deg;
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  cursor: default;
 }
 
 .grid-container {

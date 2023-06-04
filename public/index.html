@@ -21,7 +21,6 @@
     class="relative flex min-h-screen flex-col items-center justify-start xs:mx-4 3xl:mt-0"
   >
     <!-- HEADER SECTION VAZNO -->
-    <!-- Navbar is wraped because of sticky positioning -->
     <div class="wraper relative">
       <nav
         class="navbar mb-5 flex w-full max-w-6xl items-center justify-between p-4 xs:mb-2 xs:h-[100px] xs:w-full xs:scale-90 xs:justify-between md:h-[100px] md:p-6 3xl:mb-0 3xl:h-[150px] 3xl:max-w-6xl 3xl:items-start 3xl:justify-between 3xl:px-0 3xl:pt-8"
@@ -220,7 +219,50 @@
 
           <div class="col-left xs:flex xs:w-full xs:flex-col">
             <h1 class="h1 paymentheader prose prose-stone xs:text-5xl">
-              Payments infrastructure for the world
+              <!-- Payments infrastructure for the world -->
+              <div class="flex whitespace-pre">
+                <span class="headerspans">P</span>
+                <span class="headerspans">a</span>
+                <span class="headerspans">y</span>
+                <span class="headerspans">m</span>
+                <span class="headerspans">e</span>
+                <span class="headerspans">n</span>
+                <span class="headerspans">t</span>
+                <span class="headerspans">s</span>
+                <span class="headerspans"> </span>
+              </div>
+              <div class="flex whitespace-pre">
+                <span class="headerspans">i</span>
+                <span class="headerspans">n</span>
+                <span class="headerspans">f</span>
+                <span class="headerspans">r</span>
+                <span class="headerspans">a</span>
+                <span class="headerspans">s</span>
+                <span class="headerspans">t</span>
+                <span class="headerspans">r</span>
+                <span class="headerspans">u</span>
+                <span class="headerspans">c</span>
+                <span class="headerspans">t</span>
+                <span class="headerspans">u</span>
+                <span class="headerspans">r</span>
+                <span class="headerspans">e</span>
+                <span class="headerspans"> </span>
+              </div>
+              <div class="flex whitespace-pre">
+                <span class="headerspans">f</span>
+                <span class="headerspans">o</span>
+                <span class="headerspans">r</span>
+                <span class="headerspans"> </span>
+                <span class="headerspans">t</span>
+                <span class="headerspans">h</span>
+                <span class="headerspans">e</span>
+                <span class="headerspans"> </span>
+                <span class="headerspans">w</span>
+                <span class="headerspans">o</span>
+                <span class="headerspans">r</span>
+                <span class="headerspans">l</span>
+                <span class="headerspans">d</span>
+              </div>
             </h1>
             <p class="par max-w-lg 3xl:text-3xl">
               Tons of companies all over the world use Swipe's seamless platform
@@ -250,9 +292,7 @@
         </div>
       </div>
       <!-- PARTNERS VAZNO -->
-      <div
-        class="partners-section relative -z-50 transition-all"
-      >
+      <div class="partners-section relative -z-50 transition-all">
         <div
           class="section-container section mt-10 max-w-6xl xs:mt-12 3xl:mt-4 3xl:-translate-y-20"
         >
@@ -272,11 +312,11 @@
       </div>
       <!-- UNIFIED PLATFORM VAZNO -->
       <section
-        class="unified-platform section transition-all 3xl:mt-22 mb-8 mt-16 max-h-screen w-full max-w-6xl xs:mb-4 xs:mt-12"
+        class="unified-platform section 3xl:mt-22 mb-8 mt-16 max-h-screen w-full max-w-6xl transition-all xs:mb-4 xs:mt-12"
         id="resources"
       >
-        <div class=" w-1/2 xs:w-full md:mx-8">
-          <p class="subtitle mb-6 xs:text-center 3xl:text-3xl">
+        <div class="w-1/2 xs:w-full md:mx-8">
+          <p class="subtitle unifiedpar mb-6 xs:text-center 3xl:text-3xl">
             Unified platform
           </p>
           <h2
@@ -314,11 +354,9 @@
       </section>
       <!-- GRID SECTION -->
       <section
-        class="graphic-section mb-20 mt-20 w-full max-w-6xl xs:collapse md:scale-90 transition-all"
+        class="graphic-section mb-20 mt-20 w-full max-w-6xl transition-all xs:collapse md:scale-90"
       >
-        <div
-          class="section grid-container grid gap-12"
-        >
+        <div class="section grid-container grid gap-12">
           <img class="monobank" src="assets/credit-card.png" id="credit-card" />
           <img src="assets/slack-invoice.png" id="invoice" />
           <img src="assets/phone.png" id="phone" />
@@ -392,7 +430,9 @@
               </div>
             </div>
           </div>
-          <div class="terminals transition-all duration-1000 col-right xs:collapse">
+          <div
+            class="terminals col-right transition-all duration-1000 xs:collapse"
+          >
             <img
               class="mb-5 scale-90 rounded-3xl"
               src="assets/terminal-code.png"
@@ -722,7 +762,7 @@
             </div>
           </div>
           <div
-            class="col-right transition-all duration-1000 virtual relative z-30 overflow-hidden rounded-3xl border border-solid bg-gradient-to-tr from-purplish-600 to-bluish-600 pr-0 pt-10 shadow-2xl xs:w-full md:w-full"
+            class="col-right virtual relative z-30 overflow-hidden rounded-3xl border border-solid bg-gradient-to-tr from-purplish-600 to-bluish-600 pr-0 pt-10 shadow-2xl transition-all duration-1000 xs:w-full md:w-full"
           >
             <div class="flex items-center justify-center">
               <img class="scale-50" src="assets/swipe-sessions.png" />
@@ -825,7 +865,7 @@
         class="section relative mt-16 w-full max-w-6xl from-slate-100 to-slate-400 pb-8 pt-16 transition-all duration-700 before:absolute before:bottom-[50px] before:left-[-600px] before:top-[15px] before:-z-10 before:h-[300px] before:w-[2500px] before:-skew-y-3 before:bg-gradient-to-tr xs:mt-4 md:mt-4"
       >
         <div
-          class="flex items-star justify-center xs:flex xs:flex-wrap xs:items-start xs:justify-start"
+          class="items-star flex justify-center xs:flex xs:flex-wrap xs:items-start xs:justify-start"
         >
           <div>
             <div

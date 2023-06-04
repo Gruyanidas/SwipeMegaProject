@@ -15,6 +15,7 @@ const signup = document.getElementById("sign-up");
 const signupcls = document.getElementById("sign-up-close");
 const signupbtn = document.getElementById("signupbtn");
 const signinbtn = document.getElementById("signinbtn");
+const header = document.querySelector(".paymentheader");
 
 // document.getElementsByClassName("anchor") VAZNO VRACA HTML COLLECTION KOJA MORA DA SE PREVEDE U ARRAYv SA SPREAD OPERATOROM
 //VAZNO Smooth scroll
@@ -362,3 +363,34 @@ const virtOpt = {
 
 const virtObserver = new IntersectionObserver(virtRevealer, virtOpt);
 virtObserver.observe(lastpar);
+
+
+// NASLOV Mouseover header radi odlicno ali za text u jednom redu
+
+const unpar = document.querySelector('.unifiedpar')
+
+const text = unpar.textContent;
+const arrtext = [...text];
+
+//Sredjivanje white space sa pocetka i kraja
+const index1 = arrtext.findIndex((item) => item == "U");
+const index2 = arrtext.lastIndexOf("m");
+
+const newpar = [...arrtext.slice(index1, index2 + 1)];
+
+const converto = function (word) {
+  return [...word]
+    .map((letter) => `<span class="headerspans">${letter}</span>`)
+    .join("");
+};
+
+unpar.innerHTML = converto(newpar);
+
+// const newspanelements = [...document.querySelectorAll(".headerspans")];
+
+// newspanelements.addEventListener("mouseenter", function(){
+//   newspanelements.forEach(item => item.classList.add("scale-150"))
+// });
+
+
+
