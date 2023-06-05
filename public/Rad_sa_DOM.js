@@ -64,3 +64,4 @@ console.log(logo.dataset.versionNumber);
 
 //Classes
 // add, remove, toggle, contains, VAZNO moze po vise klasa odjednom add(c,b)
+//Random line just for git hub :D
